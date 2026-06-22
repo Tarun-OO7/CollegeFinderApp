@@ -1,0 +1,962 @@
+[
+  {
+    "id": "iit-bombay",
+    "name": "Indian Institute of Technology, Bombay",
+    "location": "Mumbai",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4.8,
+    "totalFees": 900000,
+    "overview": "IIT Bombay is one of India's premier engineering institutes, known for cutting-edge research and a vibrant campus culture.",
+    "courses": [
+      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 900000 },
+      { "name": "B.Tech Electrical Engineering", "duration": "4 years", "fees": 900000 },
+      { "name": "M.Tech AI & DS", "duration": "2 years", "fees": 200000 }
+    ],
+    "placements": {
+      "averagePackage": 2300000,
+      "highestPackage": 21000000,
+      "topRecruiters": ["Google", "Microsoft", "Goldman Sachs", "Apple"]
+    }
+  },
+  {
+    "id": "iit-delhi",
+    "name": "Indian Institute of Technology, Delhi",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4.7,
+    "totalFees": 880000,
+    "overview": "IIT Delhi excels in engineering education and innovation, hosting India's leading startup incubators.",
+    "courses": [
+      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 880000 },
+      { "name": "B.Tech Mechanical Engineering", "duration": "4 years", "fees": 880000 }
+    ],
+    "placements": {
+      "averagePackage": 2200000,
+      "highestPackage": 19500000,
+      "topRecruiters": ["Microsoft", "Amazon", "Adobe", "Uber"]
+    }
+  },
+  {
+    "id": "iit-madras",
+    "name": "Indian Institute of Technology, Madras",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Govt",
+    "rating": 4.8,
+    "totalFees": 850000,
+    "overview": "IIT Madras consistently ranks #1 in NIRF for engineering and is known for its research depth.",
+    "courses": [
+      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 850000 },
+      { "name": "Dual Degree Data Science", "duration": "5 years", "fees": 1100000 }
+    ],
+    "placements": {
+      "averagePackage": 2150000,
+      "highestPackage": 19800000,
+      "topRecruiters": ["Google", "Qualcomm", "Texas Instruments"]
+    }
+  },
+  {
+    "id": "iit-kanpur",
+    "name": "Indian Institute of Technology, Kanpur",
+    "location": "Kanpur",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 4.6,
+    "totalFees": 820000,
+    "overview": "IIT Kanpur is renowned for its strong academic culture and rigorous engineering programs.",
+    "courses": [
+      { "name": "B.Tech Aerospace", "duration": "4 years", "fees": 820000 },
+      { "name": "B.Tech Computer Science", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 2000000,
+      "highestPackage": 18000000,
+      "topRecruiters": ["ISRO", "Boeing", "Microsoft"]
+    }
+  },
+  {
+    "id": "iit-kharagpur",
+    "name": "Indian Institute of Technology, Kharagpur",
+    "location": "Kharagpur",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 4.5,
+    "totalFees": 830000,
+    "overview": "India's oldest IIT, offering broad engineering and interdisciplinary programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 830000 },
+      { "name": "B.Arch", "duration": "5 years", "fees": 1000000 }
+    ],
+    "placements": {
+      "averagePackage": 1950000,
+      "highestPackage": 17500000,
+      "topRecruiters": ["Goldman Sachs", "Microsoft", "Tata Steel"]
+    }
+  },
+  {
+    "id": "nit-trichy",
+    "name": "National Institute of Technology, Tiruchirappalli",
+    "location": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 560000,
+    "overview": "NIT Trichy is the top-ranked NIT, known for strong placements and academic rigor.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 560000 },
+      { "name": "B.Tech ECE", "duration": "4 years", "fees": 560000 }
+    ],
+    "placements": {
+      "averagePackage": 1500000,
+      "highestPackage": 6000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Oracle"]
+    }
+  },
+  {
+    "id": "nit-warangal",
+    "name": "National Institute of Technology, Warangal",
+    "location": "Warangal",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 4.3,
+    "totalFees": 540000,
+    "overview": "NIT Warangal is a leading NIT with diverse engineering offerings and strong industry ties.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 540000 }
+    ],
+    "placements": {
+      "averagePackage": 1400000,
+      "highestPackage": 5500000,
+      "topRecruiters": ["Amazon", "Microsoft"]
+    }
+  },
+  {
+    "id": "nit-surathkal",
+    "name": "National Institute of Technology, Karnataka, Surathkal",
+    "location": "Mangalore",
+    "state": "Karnataka",
+    "type": "Govt",
+    "rating": null,
+    "totalFees": 530000,
+    "overview": "NITK Surathkal is a coastal NIT offering excellent engineering and research environment.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 530000 },
+      { "name": "B.Tech Civil", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1350000,
+      "topRecruiters": ["Cisco", "Microsoft"]
+    }
+  },
+  {
+    "id": "bits-pilani",
+    "name": "Birla Institute of Technology and Science, Pilani",
+    "location": "Pilani",
+    "state": "Rajasthan",
+    "type": "Private",
+    "rating": 4.5,
+    "totalFees": 1800000,
+    "overview": "BITS Pilani is a top-tier private engineering institute known for flexible curriculum and global alumni.",
+    "courses": [
+      { "name": "B.E. Computer Science", "duration": "4 years", "fees": 1800000 },
+      { "name": "M.Sc. Economics", "duration": "2 years", "fees": 700000 }
+    ],
+    "placements": {
+      "averagePackage": 1750000,
+      "highestPackage": 9000000,
+      "topRecruiters": ["Microsoft", "Goldman Sachs", "Uber"]
+    }
+  },
+  {
+    "id": "vit-vellore",
+    "name": "Vellore Institute of Technology",
+    "location": "Vellore",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 4.2,
+    "totalFees": 1600000,
+    "overview": "VIT is a large private university with diverse engineering and management programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1600000 },
+      { "name": "MBA", "duration": "2 years", "fees": 900000 }
+    ],
+    "placements": {
+      "averagePackage": 900000,
+      "highestPackage": 4400000,
+      "topRecruiters": ["TCS", "Infosys", "Cognizant", "Amazon"]
+    }
+  },
+  {
+    "id": "manipal",
+    "name": "Manipal Institute of Technology",
+    "location": "Manipal",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 4.1,
+    "totalFees": 1700000,
+    "overview": "MIT Manipal is a deemed university offering wide-ranging programs with strong industry exposure.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1700000 }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": 4500000,
+      "topRecruiters": ["Microsoft", "Amazon", "Walmart"]
+    }
+  },
+  {
+    "id": "srm-chennai",
+    "name": "SRM Institute of Science and Technology",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 3.9,
+    "totalFees": 1500000,
+    "overview": "SRM is a large deemed-to-be university with multiple campuses and a global student community.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1500000 },
+      { "name": "BBA", "duration": "3 years", "fees": 600000 }
+    ],
+    "placements": {
+      "averagePackage": 700000,
+      "highestPackage": 4100000,
+      "topRecruiters": ["TCS", "Wipro", "Cognizant"]
+    }
+  },
+  {
+    "id": "iiit-hyderabad",
+    "name": "International Institute of Information Technology, Hyderabad",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Deemed",
+    "rating": 4.6,
+    "totalFees": 1300000,
+    "overview": "IIIT Hyderabad is a research-focused institute known for top-tier CS programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 },
+      { "name": "Dual Degree CSE + MS", "duration": "5 years", "fees": 1700000 }
+    ],
+    "placements": {
+      "averagePackage": 2900000,
+      "highestPackage": 8200000,
+      "topRecruiters": ["Google", "Microsoft", "Adobe", "Goldman Sachs"]
+    }
+  },
+  {
+    "id": "dtu-delhi",
+    "name": "Delhi Technological University",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 720000,
+    "overview": "DTU is a state-funded technical university with a long heritage in Delhi.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 720000 },
+      { "name": "B.Tech ECE", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1500000,
+      "highestPackage": 6000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Samsung"]
+    }
+  },
+  {
+    "id": "iit-roorkee",
+    "name": "Indian Institute of Technology, Roorkee",
+    "location": "Roorkee",
+    "state": "Uttarakhand",
+    "type": "Govt",
+    "rating": 4.5,
+    "totalFees": 810000,
+    "overview": "IIT Roorkee, one of the oldest engineering schools in Asia, with renowned civil and mechanical programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 810000 },
+      { "name": "B.Tech Civil", "duration": "4 years", "fees": 810000 }
+    ],
+    "placements": {
+      "averagePackage": 1800000,
+      "highestPackage": 14500000,
+      "topRecruiters": ["Microsoft", "L&T", "Schlumberger"]
+    }
+  },
+  {
+    "id": "nit-calicut",
+    "name": "National Institute of Technology, Calicut",
+    "location": "Kozhikode",
+    "state": "Kerala",
+    "type": "Govt",
+    "rating": 4.2,
+    "overview": "NIT Calicut offers strong engineering programs in a scenic Kerala campus.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": 4800000,
+      "topRecruiters": ["Amazon", "Cisco"]
+    }
+  },
+  {
+    "id": "thapar-patiala",
+    "name": "Thapar Institute of Engineering and Technology",
+    "location": "Patiala",
+    "state": "Punjab",
+    "type": "Deemed",
+    "rating": 4.0,
+    "totalFees": 1500000,
+    "overview": "Thapar is a leading deemed institute in North India, with strong engineering and management programs.",
+    "courses": [
+      { "name": "B.E. CSE", "duration": "4 years", "fees": 1500000 }
+    ],
+    "placements": {
+      "averagePackage": 1000000,
+      "highestPackage": 5200000,
+      "topRecruiters": []
+    }
+  },
+  {
+    "id": "amrita-coimbatore",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "location": "Coimbatore",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 4.0,
+    "totalFees": 1300000,
+    "overview": "Amrita is a multi-campus deemed university with strong engineering and humanities offerings.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 },
+      { "name": "BBA", "duration": "3 years" }
+    ],
+    "placements": {
+      "averagePackage": 800000,
+      "topRecruiters": ["TCS", "Wipro"]
+    }
+  },
+  {
+    "id": "pes-bangalore",
+    "name": "PES University",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Private",
+    "rating": null,
+    "totalFees": 1600000,
+    "overview": "PES University is a leading private university in Bangalore with excellent placement record.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1600000 }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": 5800000,
+      "topRecruiters": ["Goldman Sachs", "Microsoft", "Amazon"]
+    }
+  },
+  {
+    "id": "lpu-jalandhar",
+    "name": "Lovely Professional University",
+    "location": "Phagwara",
+    "state": "Punjab",
+    "type": "Private",
+    "rating": 3.7,
+    "overview": "LPU is one of India's largest private universities, offering diverse programs and a vibrant campus.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years" },
+      { "name": "BBA", "duration": "3 years", "fees": 500000 }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": 4200000,
+      "topRecruiters": []
+    }
+  },
+  {
+    "id": "iit-guwahati",
+    "name": "Indian Institute of Technology, Guwahati",
+    "location": "Guwahati",
+    "state": "Assam",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 800000,
+    "overview": "IIT Guwahati is the youngest of the original IITs, set on the banks of the Brahmaputra with a beautiful campus.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
+      { "name": "B.Tech Biotechnology", "duration": "4 years", "fees": 800000 }
+    ],
+    "placements": {
+      "averagePackage": 1700000,
+      "highestPackage": 13000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Samsung", "Goldman Sachs"]
+    }
+  },
+  {
+    "id": "iit-hyderabad",
+    "name": "Indian Institute of Technology, Hyderabad",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 4.5,
+    "totalFees": 820000,
+    "overview": "IIT Hyderabad pioneered fractal academics and is known for strong AI and entrepreneurship culture.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 820000 },
+      { "name": "B.Tech AI", "duration": "4 years", "fees": 820000 }
+    ],
+    "placements": {
+      "averagePackage": 2050000,
+      "highestPackage": 17800000,
+      "topRecruiters": ["Microsoft", "Google", "Qualcomm"]
+    }
+  },
+  {
+    "id": "iit-bhu",
+    "name": "Indian Institute of Technology (BHU), Varanasi",
+    "location": "Varanasi",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 4.3,
+    "totalFees": 800000,
+    "overview": "IIT-BHU traces its heritage back to 1919 and offers a wide range of engineering disciplines.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
+      { "name": "B.Tech Chemical", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1600000,
+      "highestPackage": 11500000,
+      "topRecruiters": ["Microsoft", "Goldman Sachs", "Reliance"]
+    }
+  },
+  {
+    "id": "iit-indore",
+    "name": "Indian Institute of Technology, Indore",
+    "location": "Indore",
+    "state": "Madhya Pradesh",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 830000,
+    "overview": "IIT Indore is a younger IIT known for its research focus and modern campus.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 830000 }
+    ],
+    "placements": {
+      "averagePackage": 1750000,
+      "highestPackage": 14000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Adobe"]
+    }
+  },
+  {
+    "id": "iit-gandhinagar",
+    "name": "Indian Institute of Technology, Gandhinagar",
+    "location": "Gandhinagar",
+    "state": "Gujarat",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 815000,
+    "overview": "IIT Gandhinagar emphasizes a holistic curriculum with strong design and humanities exposure.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 815000 },
+      { "name": "B.Tech Mechanical", "duration": "4 years", "fees": 815000 }
+    ],
+    "placements": {
+      "averagePackage": 1650000,
+      "highestPackage": 9500000,
+      "topRecruiters": ["Microsoft", "Goldman Sachs", "Texas Instruments"]
+    }
+  },
+  {
+    "id": "iit-mandi",
+    "name": "Indian Institute of Technology, Mandi",
+    "location": "Mandi",
+    "state": "Himachal Pradesh",
+    "type": "Govt",
+    "rating": null,
+    "totalFees": 825000,
+    "overview": "IIT Mandi is nestled in the Himalayas, blending strong academics with a unique campus experience.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 825000 }
+    ],
+    "placements": {
+      "averagePackage": 1450000,
+      "highestPackage": 8500000,
+      "topRecruiters": ["Microsoft", "Amazon"]
+    }
+  },
+  {
+    "id": "iit-ropar",
+    "name": "Indian Institute of Technology, Ropar",
+    "location": "Rupnagar",
+    "state": "Punjab",
+    "type": "Govt",
+    "rating": 4.1,
+    "totalFees": 820000,
+    "overview": "IIT Ropar is a newer IIT that has rapidly built a strong reputation for research output.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 820000 }
+    ],
+    "placements": {
+      "averagePackage": 1500000,
+      "highestPackage": 8000000,
+      "topRecruiters": ["Microsoft", "Samsung", "Flipkart"]
+    }
+  },
+  {
+    "id": "iit-jodhpur",
+    "name": "Indian Institute of Technology, Jodhpur",
+    "location": "Jodhpur",
+    "state": "Rajasthan",
+    "type": "Govt",
+    "rating": 4.0,
+    "totalFees": 810000,
+    "overview": "IIT Jodhpur is known for interdisciplinary programs and strong industry collaboration in AI and IoT.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 810000 },
+      { "name": "B.Tech AI & DS", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1400000,
+      "highestPackage": 7500000,
+      "topRecruiters": ["Microsoft", "Cisco"]
+    }
+  },
+  {
+    "id": "nit-rourkela",
+    "name": "National Institute of Technology, Rourkela",
+    "location": "Rourkela",
+    "state": "Odisha",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 550000,
+    "overview": "NIT Rourkela is a leading NIT known for strong metallurgy and computing programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 550000 },
+      { "name": "B.Tech Metallurgy", "duration": "4 years", "fees": 550000 }
+    ],
+    "placements": {
+      "averagePackage": 1300000,
+      "highestPackage": 5800000,
+      "topRecruiters": ["Microsoft", "Tata Steel", "Amazon"]
+    }
+  },
+  {
+    "id": "nit-allahabad",
+    "name": "Motilal Nehru National Institute of Technology, Allahabad",
+    "location": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 4.1,
+    "totalFees": 540000,
+    "overview": "MNNIT Allahabad is one of the oldest engineering institutes in India, known for its CS and ECE programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 540000 }
+    ],
+    "placements": {
+      "averagePackage": 1350000,
+      "highestPackage": 5500000,
+      "topRecruiters": ["Microsoft", "Amazon", "Samsung"]
+    }
+  },
+  {
+    "id": "nit-jaipur",
+    "name": "Malaviya National Institute of Technology, Jaipur",
+    "location": "Jaipur",
+    "state": "Rajasthan",
+    "type": "Govt",
+    "rating": null,
+    "totalFees": 530000,
+    "overview": "MNIT Jaipur offers strong engineering programs in the Pink City with growing research output.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 530000 }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": 5200000,
+      "topRecruiters": ["Microsoft", "Amazon"]
+    }
+  },
+  {
+    "id": "nit-surat",
+    "name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+    "location": "Surat",
+    "state": "Gujarat",
+    "type": "Govt",
+    "rating": 4.0,
+    "totalFees": 520000,
+    "overview": "SVNIT Surat is a respected NIT with strong civil, chemical and computer engineering departments.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 520000 },
+      { "name": "B.Tech Chemical", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": 4800000,
+      "topRecruiters": ["Microsoft", "L&T", "Reliance"]
+    }
+  },
+  {
+    "id": "nit-nagpur",
+    "name": "Visvesvaraya National Institute of Technology, Nagpur",
+    "location": "Nagpur",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4.0,
+    "totalFees": 525000,
+    "overview": "VNIT Nagpur is a centrally-located NIT with strong programs in mechanical, civil and computer science.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 525000 }
+    ],
+    "placements": {
+      "averagePackage": 1250000,
+      "highestPackage": 5000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Cisco"]
+    }
+  },
+  {
+    "id": "nit-kurukshetra",
+    "name": "National Institute of Technology, Kurukshetra",
+    "location": "Kurukshetra",
+    "state": "Haryana",
+    "type": "Govt",
+    "rating": 3.9,
+    "overview": "NIT Kurukshetra is a well-established NIT in North India with diverse engineering offerings.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": 4600000,
+      "topRecruiters": ["Amazon", "Samsung"]
+    }
+  },
+  {
+    "id": "nit-durgapur",
+    "name": "National Institute of Technology, Durgapur",
+    "location": "Durgapur",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 520000,
+    "overview": "NIT Durgapur is one of the older NITs with a strong industrial heritage in eastern India.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 520000 },
+      { "name": "B.Tech Metallurgy", "duration": "4 years" }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": 4500000,
+      "topRecruiters": ["TCS", "Microsoft"]
+    }
+  },
+  {
+    "id": "nit-bhopal",
+    "name": "Maulana Azad National Institute of Technology, Bhopal",
+    "location": "Bhopal",
+    "state": "Madhya Pradesh",
+    "type": "Govt",
+    "rating": null,
+    "totalFees": 510000,
+    "overview": "MANIT Bhopal is a central-India NIT offering a wide range of engineering programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 510000 }
+    ],
+    "placements": {
+      "averagePackage": 1000000,
+      "highestPackage": 4300000,
+      "topRecruiters": ["Microsoft", "TCS"]
+    }
+  },
+  {
+    "id": "iiit-bangalore",
+    "name": "International Institute of Information Technology, Bangalore",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 4.4,
+    "totalFees": 1500000,
+    "overview": "IIIT Bangalore is an autonomous deemed institute focused on IT education and research.",
+    "courses": [
+      { "name": "iMTech CSE", "duration": "5 years", "fees": 1500000 },
+      { "name": "M.Tech AI/ML", "duration": "2 years", "fees": 800000 }
+    ],
+    "placements": {
+      "averagePackage": 2400000,
+      "highestPackage": 7800000,
+      "topRecruiters": ["Microsoft", "Google", "Goldman Sachs"]
+    }
+  },
+  {
+    "id": "iiit-delhi",
+    "name": "Indraprastha Institute of Information Technology, Delhi",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4.3,
+    "totalFees": 1400000,
+    "overview": "IIIT-Delhi is a state university focused on IT, with strong research and industry connections.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1400000 },
+      { "name": "B.Tech CSAM", "duration": "4 years", "fees": 1400000 }
+    ],
+    "placements": {
+      "averagePackage": 2100000,
+      "highestPackage": 6800000,
+      "topRecruiters": ["Microsoft", "Amazon", "Adobe"]
+    }
+  },
+  {
+    "id": "iiit-allahabad",
+    "name": "Indian Institute of Information Technology, Allahabad",
+    "location": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 4.0,
+    "totalFees": 950000,
+    "overview": "IIIT Allahabad is a centrally funded technical institute specializing in IT and ECE.",
+    "courses": [
+      { "name": "B.Tech IT", "duration": "4 years", "fees": 950000 }
+    ],
+    "placements": {
+      "averagePackage": 1700000,
+      "highestPackage": 6500000,
+      "topRecruiters": ["Amazon", "Microsoft", "Samsung"]
+    }
+  },
+  {
+    "id": "iiit-gwalior",
+    "name": "ABV-Indian Institute of Information Technology and Management, Gwalior",
+    "location": "Gwalior",
+    "state": "Madhya Pradesh",
+    "type": "Govt",
+    "rating": null,
+    "overview": "ABV-IIITM Gwalior combines IT and management education with a strong central-India campus.",
+    "courses": [
+      { "name": "Integrated MBA-IT", "duration": "5 years" }
+    ],
+    "placements": {
+      "averagePackage": 950000,
+      "highestPackage": 4200000,
+      "topRecruiters": ["TCS", "Infosys"]
+    }
+  },
+  {
+    "id": "jadavpur",
+    "name": "Jadavpur University",
+    "location": "Kolkata",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 50000,
+    "overview": "Jadavpur University is a state university in Kolkata known for affordable, research-driven engineering education.",
+    "courses": [
+      { "name": "B.E. CSE", "duration": "4 years", "fees": 50000 },
+      { "name": "B.E. ETC", "duration": "4 years", "fees": 50000 }
+    ],
+    "placements": {
+      "averagePackage": 1300000,
+      "highestPackage": 5500000,
+      "topRecruiters": ["Microsoft", "Amazon", "Google"]
+    }
+  },
+  {
+    "id": "coep-pune",
+    "name": "College of Engineering, Pune",
+    "location": "Pune",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 350000,
+    "overview": "COEP Pune is one of the oldest engineering colleges in India, with strong heritage and placements.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 350000 }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": 5000000,
+      "topRecruiters": ["Microsoft", "Amazon", "Bajaj"]
+    }
+  },
+  {
+    "id": "ict-mumbai",
+    "name": "Institute of Chemical Technology, Mumbai",
+    "location": "Mumbai",
+    "state": "Maharashtra",
+    "type": "Deemed",
+    "rating": 4.5,
+    "totalFees": 400000,
+    "overview": "ICT Mumbai is a deemed institute renowned for chemical engineering and pharma sciences.",
+    "courses": [
+      { "name": "B.Tech Chemical", "duration": "4 years", "fees": 400000 },
+      { "name": "B.Pharm", "duration": "4 years", "fees": 350000 }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": 6000000,
+      "topRecruiters": ["Reliance", "Pfizer", "Unilever"]
+    }
+  },
+  {
+    "id": "shiv-nadar",
+    "name": "Shiv Nadar Institution of Eminence",
+    "location": "Greater Noida",
+    "state": "Uttar Pradesh",
+    "type": "Private",
+    "rating": 4.2,
+    "totalFees": 1650000,
+    "overview": "Shiv Nadar University is a research-focused private institute with liberal-arts inspired engineering curriculum.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1650000 }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": 5400000,
+      "topRecruiters": ["Microsoft", "Amazon"]
+    }
+  },
+  {
+    "id": "ashoka",
+    "name": "Ashoka University",
+    "location": "Sonipat",
+    "state": "Haryana",
+    "type": "Private",
+    "rating": 4.3,
+    "totalFees": 1900000,
+    "overview": "Ashoka University is a liberal arts university with growing CS and interdisciplinary programs.",
+    "courses": [
+      { "name": "B.Sc. Computer Science", "duration": "3 years", "fees": 1900000 },
+      { "name": "B.A. Economics", "duration": "3 years", "fees": 1900000 }
+    ],
+    "placements": {
+      "averagePackage": 950000,
+      "highestPackage": 4200000,
+      "topRecruiters": []
+    }
+  },
+  {
+    "id": "jindal",
+    "name": "O.P. Jindal Global University",
+    "location": "Sonipat",
+    "state": "Haryana",
+    "type": "Private",
+    "rating": 4.1,
+    "overview": "JGU is a private research university with diverse programs across law, business and tech.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years" },
+      { "name": "BBA", "duration": "3 years", "fees": 1200000 }
+    ],
+    "placements": {
+      "averagePackage": 800000,
+      "topRecruiters": ["Deloitte", "EY"]
+    }
+  },
+  {
+    "id": "christ-bangalore",
+    "name": "Christ (Deemed to be University)",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 4.0,
+    "totalFees": 800000,
+    "overview": "Christ University is a deemed multi-disciplinary university with strong management and CS programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
+      { "name": "BBA", "duration": "3 years", "fees": 600000 }
+    ],
+    "placements": {
+      "averagePackage": 700000,
+      "highestPackage": 3500000,
+      "topRecruiters": ["TCS", "Wipro", "Deloitte"]
+    }
+  },
+  {
+    "id": "amity-noida",
+    "name": "Amity University, Noida",
+    "location": "Noida",
+    "state": "Uttar Pradesh",
+    "type": "Private",
+    "rating": 3.8,
+    "totalFees": 1400000,
+    "overview": "Amity University Noida is one of India's largest private universities with a wide range of programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1400000 }
+    ],
+    "placements": {
+      "averagePackage": 700000,
+      "highestPackage": 4000000,
+      "topRecruiters": ["TCS", "Wipro", "Cognizant"]
+    }
+  },
+  {
+    "id": "symbiosis-pune",
+    "name": "Symbiosis Institute of Technology, Pune",
+    "location": "Pune",
+    "state": "Maharashtra",
+    "type": "Deemed",
+    "rating": 3.9,
+    "totalFees": 1300000,
+    "overview": "Symbiosis Institute of Technology is a deemed-university engineering school with strong Pune industry ties.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 }
+    ],
+    "placements": {
+      "averagePackage": 750000,
+      "highestPackage": 4200000,
+      "topRecruiters": ["Infosys", "TCS"]
+    }
+  },
+  {
+    "id": "sastra",
+    "name": "SASTRA Deemed University",
+    "location": "Thanjavur",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 4.0,
+    "totalFees": 1000000,
+    "overview": "SASTRA is a deemed university in Tamil Nadu known for affordable, quality engineering education.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1000000 }
+    ],
+    "placements": {
+      "averagePackage": 900000,
+      "highestPackage": 4400000,
+      "topRecruiters": ["Microsoft", "Amazon", "Zoho"]
+    }
+  },
+  {
+    "id": "pdpu-gandhinagar",
+    "name": "Pandit Deendayal Energy University",
+    "location": "Gandhinagar",
+    "state": "Gujarat",
+    "type": "Private",
+    "rating": null,
+    "totalFees": 1100000,
+    "overview": "PDEU (formerly PDPU) is a Gujarat-based private university with a strong focus on energy and engineering.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1100000 },
+      { "name": "B.Tech Petroleum", "duration": "4 years", "fees": 1100000 }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": 4500000,
+      "topRecruiters": ["Reliance", "ONGC", "L&T"]
+    }
+  },
+  {
+    "id": "nirma-ahmedabad",
+    "name": "Nirma University",
+    "location": "Ahmedabad",
+    "state": "Gujarat",
+    "type": "Private",
+    "rating": 3.9,
+    "overview": "Nirma University is a Gujarat-based private university with strong engineering and pharmacy programs.",
+    "courses": [
+      { "name": "B.Tech CSE", "duration": "4 years" },
+      { "name": "B.Pharm", "duration": "4 years", "fees": 800000 }
+    ],
+    "placements": {
+      "averagePackage": 800000,
+      "highestPackage": 4100000,
+      "topRecruiters": ["TCS", "Infosys"]
+    }
+  }
+]
