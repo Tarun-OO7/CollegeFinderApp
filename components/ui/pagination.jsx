@@ -37,10 +37,15 @@ const PaginationLink = ({
 }) => (
   <a
     aria-current={isActive ? "page" : undefined}
-    className={cn(buttonVariants({
-      variant: isActive ? "outline" : "ghost",
-      size,
-    }), className)}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors hover:opacity-80 cursor-pointer",
+      className
+    )}
+    style={
+      isActive
+        ? { background: '#1A1714', color: '#F8F6F1', borderRadius: '4px', padding: '4px 10px' }
+        : { color: '#8A8377', background: 'transparent', padding: '4px 10px' }
+    }
     {...props} />
 )
 PaginationLink.displayName = "PaginationLink"
@@ -49,14 +54,14 @@ const PaginationPrevious = ({
   className,
   ...props
 }) => (
-  <PaginationLink
+  <a
     aria-label="Go to previous page"
-    size="default"
-    className={cn("gap-1 pl-2.5", className)}
+    className={cn("inline-flex items-center justify-center whitespace-nowrap text-sm gap-1 cursor-pointer transition-colors hover:opacity-80", className)}
+    style={{ color: '#C6A84B', fontWeight: 500, background: 'transparent', padding: '4px 10px' }}
     {...props}>
     <ChevronLeft className="h-4 w-4" />
     <span>Previous</span>
-  </PaginationLink>
+  </a>
 )
 PaginationPrevious.displayName = "PaginationPrevious"
 
@@ -64,14 +69,14 @@ const PaginationNext = ({
   className,
   ...props
 }) => (
-  <PaginationLink
+  <a
     aria-label="Go to next page"
-    size="default"
-    className={cn("gap-1 pr-2.5", className)}
+    className={cn("inline-flex items-center justify-center whitespace-nowrap text-sm gap-1 cursor-pointer transition-colors hover:opacity-80", className)}
+    style={{ color: '#C6A84B', fontWeight: 500, background: 'transparent', padding: '4px 10px' }}
     {...props}>
     <span>Next</span>
     <ChevronRight className="h-4 w-4" />
-  </PaginationLink>
+  </a>
 )
 PaginationNext.displayName = "PaginationNext"
 

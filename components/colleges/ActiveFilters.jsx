@@ -2,6 +2,7 @@
 
 import { X } from 'lucide-react';
 import { formatINR } from '@/lib/format';
+import { Button } from '@/components/ui/Button';
 
 // Renders the current filter set as dismissable chips. Receives normalized props from page.
 export default function ActiveFilters({ query, filters, sort, onClear, feeCeiling }) {
@@ -22,20 +23,22 @@ export default function ActiveFilters({ query, filters, sort, onClear, feeCeilin
     <div className="flex flex-wrap items-center gap-2 mb-4">
       <span className="text-[11px] uppercase tracking-wider text-muted-foreground">Active</span>
       {chips.map((c) => (
-        <button
+        <Button
           key={c.key}
           onClick={c.onClear}
-          className="group inline-flex items-center gap-1 rounded-full border border-border/70 bg-background pl-2.5 pr-1.5 py-1 text-xs font-medium text-foreground hover:border-primary/40 hover:text-primary transition-colors"
+          variant="secondary"
+          size="sm"
+          className="group inline-flex items-center gap-1 rounded-full pl-2.5 pr-1.5 py-1 text-xs font-medium"
         >
           {c.label}
           <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
             <X className="h-2.5 w-2.5" />
           </span>
-        </button>
+        </Button>
       ))}
-      <button onClick={() => onClear('all')} className="text-xs text-muted-foreground underline-offset-2 hover:underline hover:text-foreground">
+      <Button variant="ghost" size="sm" onClick={() => onClear('all')} className="text-xs underline-offset-2 hover:underline">
         Clear all
-      </button>
+      </Button>
     </div>
   );
 }

@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-background">
         <Navbar />
         <main className="min-h-[calc(100vh-4rem)]">{children}</main>
-        <footer className="border-t border-border/60 bg-muted/30 mt-16">
-          <div className="container py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-            <span>© {new Date().getFullYear()} CollegeFinder · Built with Next.js, Tailwind & Recharts</span>
-            <span>Designed and crafted with care.</span>
+        <footer className="mt-16" style={{ background: '#F0EDE6', borderTop: '0.5px solid #E2DDD4' }}>
+          <div className="container py-8 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ fontSize: '12px', color: '#8A8377' }}>
+            <span>© {new Date().getFullYear()} CollegeFinder</span>
+            <span>Data based on NIRF 2024 rankings &middot; Built with Next.js &amp; Tailwind CSS</span>
           </div>
         </footer>
         <Toaster />

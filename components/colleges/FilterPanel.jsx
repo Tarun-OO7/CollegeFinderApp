@@ -3,7 +3,7 @@
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/card';
 import { SlidersHorizontal } from 'lucide-react';
 import { formatINR } from '@/lib/format';
@@ -22,12 +22,12 @@ export default function FilterPanel({ filters, onChange, states = [], onReset, m
     <Card className="sticky top-20 rounded-2xl border-border/60 shadow-soft">
       <div className="flex items-center justify-between border-b border-border/60 px-5 py-4">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg" style={{ background: '#C6A84B18', color: '#C6A84B' }}>
             <SlidersHorizontal className="h-3.5 w-3.5" />
           </span>
           <span className="font-display text-sm font-semibold">Filters</span>
           {activeCount > 0 && (
-            <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[10px] font-semibold text-primary-foreground">
+            <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[10px] font-semibold" style={{ background: '#C6A84B', color: '#0E1117' }}>
               {activeCount}
             </span>
           )}
@@ -58,17 +58,20 @@ export default function FilterPanel({ filters, onChange, states = [], onReset, m
               { v: 'Private', label: 'Private' },
               { v: 'Deemed',  label: 'Deemed' },
             ].map((t) => (
-              <button
+              <Button
                 key={t.v}
                 onClick={() => update({ type: t.v })}
-                className={`h-9 rounded-lg border text-xs font-medium transition-all ${
+                variant={f.type === t.v ? "primary" : "secondary"}
+                size="md"
+                className="w-full"
+                style={
                   f.type === t.v
-                    ? 'border-primary bg-primary text-primary-foreground shadow-soft'
-                    : 'border-border bg-background text-muted-foreground hover:border-primary/40 hover:text-foreground'
-                }`}
+                    ? { background: '#1A1714', color: '#F8F6F1', borderColor: '#1A1714' }
+                    : {}
+                }
               >
                 {t.label}
-              </button>
+              </Button>
             ))}
           </div>
         </Field>
@@ -89,7 +92,7 @@ function Field({ label, trailing, children }) {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs">
-        <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{label}</Label>
+        <Label className="font-semibold" style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#8A8377' }}>{label}</Label>
         {trailing && <span className="text-xs text-muted-foreground">{trailing}</span>}
       </div>
       {children}

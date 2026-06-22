@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState, Suspense } from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import colleges from '@/data/colleges.json';
 import CollegeCard from '@/components/colleges/CollegeCard';
-import SearchBar from '@/components/colleges/SearchBar';
+
 import FilterPanel from '@/components/colleges/FilterPanel';
 import HeroSection from '@/components/colleges/HeroSection';
 import ActiveFilters from '@/components/colleges/ActiveFilters';
@@ -153,14 +153,10 @@ function HomeInner() {
 
   return (
     <div className="container py-6 sm:py-10 space-y-8">
-      <HeroSection {...heroStats} />
+      <HeroSection {...heroStats} searchValue={query} onSearchChange={setQuery} />
 
-      {/* Search + Sort + Mobile Filters */}
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <div className="flex-1">
-          <SearchBar value={query} onChange={setQuery} />
-        </div>
-
+      {/* Sort + Mobile Filters */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <Select value={sort} onValueChange={setSort}>
           <SelectTrigger className="h-12 sm:w-56 gap-2 rounded-xl border-border/70 bg-background shadow-soft">
             <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
@@ -198,7 +194,15 @@ function HomeInner() {
           <ActiveFilters query={query} filters={filters} sort={sort} onClear={clearChip} feeCeiling={FEE_CEILING} />
 
           <div className="mb-5 flex items-center justify-between">
-            <h2 className="font-display text-lg font-semibold tracking-tight">
+            <h2
+              className="font-display font-semibold tracking-tight"
+              style={{
+                fontSize: '13px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                color: '#8A8377',
+              }}
+            >
               {loading ? 'Loading colleges…' : total === 0 ? 'No matches' : 'Top picks for you'}
             </h2>
             <span className="text-sm text-muted-foreground tabular-nums">

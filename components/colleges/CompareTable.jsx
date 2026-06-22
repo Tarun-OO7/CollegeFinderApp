@@ -46,11 +46,11 @@ export default function CompareTable({ colleges = [], onRemove }) {
         </thead>
         <tbody>
           {ROWS.map((row) => (
-            <tr key={row.label} className="border-b border-border/40 last:border-0 hover:bg-muted/20 transition-colors">
+            <tr key={row.label} className="transition-colors hover:bg-[#C6A84B08]" style={{ borderBottom: '0.5px solid #E2DDD4' }}>
               <td className="sticky left-0 bg-background/95 backdrop-blur p-4 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{row.label}</td>
               {colleges.map((c) => (
                 <td key={c.id + row.label} className="p-4 text-sm font-medium">
-                  {row.badge ? <Badge variant="secondary" className="rounded-full">{row.get(c)}</Badge> : row.get(c)}
+                  {row.badge ? <span style={{ background: 'transparent', border: '0.5px solid #E2DDD4', color: '#8A8377', borderRadius: '3px', fontSize: '11px', padding: '2px 8px' }}>{row.get(c)}</span> : row.get(c)}
                 </td>
               ))}
             </tr>
