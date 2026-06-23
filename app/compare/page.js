@@ -3,12 +3,14 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import colleges from '@/data/colleges.json';
+import SplitText from '@/components/SplitText';
 import CompareTable from '@/components/colleges/CompareTable';
 import CompareChart from '@/components/colleges/CompareChart';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/Button';
-import { GitCompareArrows, Sparkles, Plus, X } from 'lucide-react';
+import { GitCompareArrows } from 'lucide-react';
 import { getCompareIds, removeCompareId, MAX_COMPARE } from '@/lib/compareStore';
+
+const YELLOW = '#F5C800';
 
 export default function ComparePage() {
   const [ids, setIds] = useState([]);
@@ -32,75 +34,89 @@ export default function ComparePage() {
 
   return (
     <div className="container py-6 sm:py-10 space-y-6">
-      <div className="text-sm font-medium text-muted-foreground">
-        1. Browse colleges &rarr; 2. Add to shortlist &rarr; 3. Compare side by side
-      </div>
+      {/* Editorial Reven-style header: deep black with yellow accent stripe */}
+      <section
+        className="relative overflow-hidden text-white"
+        style={{ background: '#0A0A0A', borderRadius: 4 }}
+      >
+        <div className="flex flex-wrap items-center gap-2 border-b border-white/10 px-6 py-4 sm:px-10">
+          <span
+            className="inline-flex items-center px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-black"
+            style={{ background: YELLOW, borderRadius: 2 }}
+          >
+            Compare
+          </span>
+          <span className="text-[11px] uppercase tracking-wider text-white/60">
+            {selected.length}/{MAX_COMPARE} colleges selected
+          </span>
+          <span className="ml-auto hidden sm:inline-flex items-center text-[10px] uppercase tracking-[0.22em] text-white/40">
+            Side-by-side analysis
+          </span>
+        </div>
 
-      <section className="relative isolate overflow-hidden rounded-3xl border border-border/60 bg-hero-mesh p-6 sm:p-8 animate-fade-in-up">
-        <div className="pointer-events-none absolute inset-0 bg-grid-faint opacity-50 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-        <div className="relative flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur">
-              <Sparkles className="h-3 w-3 text-primary" /> Side-by-side comparison
-            </span>
-            <h1 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Your <span className="gradient-text">shortlist</span>
-            </h1>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Compare up to {MAX_COMPARE} colleges side-by-side — <span className="font-medium text-foreground tabular-nums">{selected.length}/{MAX_COMPARE}</span> added.
-            </p>
+        <div className="px-6 py-10 sm:px-10 sm:py-14">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="min-w-0">
+              <div className="pl-5 sm:pl-6" style={{ borderLeft: `6px solid ${YELLOW}` }}>
+                <SplitText
+                  text="Your Shortlist"
+                  tag="h1"
+                  className="font-headline text-[clamp(2.25rem,6vw,5rem)] font-black uppercase leading-[0.92] tracking-tight text-white"
+                  textAlign="left"
+                  delay={32}
+                  duration={0.9}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 48 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.2}
+                  rootMargin="0px"
+                />
+              </div>
+              <p className="mt-5 max-w-xl text-sm sm:text-base text-white/70 leading-relaxed">
+                Compare up to <span style={{ color: YELLOW }} className="font-bold">{MAX_COMPARE}</span> colleges side-by-side — fees, placements, ratings, recruiters — in one editorial view.
+              </p>
+            </div>
+            {selected.length > 0 && (
+              <button
+                onClick={() => { selected.forEach((c) => removeCompareId(c.id)); setIds([]); }}
+                className="inline-flex shrink-0 items-center gap-2 px-5 py-3 text-sm font-extrabold uppercase tracking-wider text-black"
+                style={{ background: YELLOW, borderRadius: 4 }}
+              >
+                Clear all
+              </button>
+            )}
           </div>
-          {selected.length > 0 && (
-            <Button variant="outline" className="rounded-xl bg-background" onClick={() => { selected.forEach((c) => removeCompareId(c.id)); setIds([]); }}>
-              Clear all
-            </Button>
-          )}
         </div>
       </section>
 
       {!ready ? (
-        <Card className="rounded-2xl"><CardContent className="py-16 text-center text-muted-foreground">Loading…</CardContent></Card>
+        <div className="py-16 text-center text-muted-foreground">Loading…</div>
+      ) : selected.length === 0 ? (
+        <div
+          className="flex flex-col items-center justify-center gap-3 py-20 text-center"
+          style={{ background: '#0A0A0A', borderRadius: 4 }}
+        >
+          <div
+            className="flex h-14 w-14 items-center justify-center"
+            style={{ background: YELLOW, color: '#000', borderRadius: 4 }}
+          >
+            <GitCompareArrows className="h-7 w-7" strokeWidth={2.5} />
+          </div>
+          <div className="font-headline text-2xl uppercase tracking-tight text-white">No colleges added yet</div>
+          <p className="max-w-xs text-sm text-white/60">Open any college and tap &quot;Add to Compare&quot; to start building your shortlist.</p>
+          <Link href="/">
+            <button
+              className="mt-2 inline-flex items-center px-5 py-2.5 text-sm font-extrabold uppercase tracking-wider text-black"
+              style={{ background: YELLOW, borderRadius: 4 }}
+            >
+              Browse colleges
+            </button>
+          </Link>
+        </div>
       ) : (
         <div className="space-y-6 animate-fade-in-up">
-          {/* 3 Slots */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[0, 1, 2].map((i) => {
-              const c = selected[i];
-              if (c) {
-                return (
-                  <Card key={c.id} className="relative p-4 flex flex-col justify-center rounded-2xl border-border/60 shadow-soft">
-                    <div className="font-semibold text-base line-clamp-1 pr-6">{c.name}</div>
-                    <div className="text-xs text-muted-foreground mt-1 truncate">{c.location}, {c.state}</div>
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      className="absolute top-2 right-2 h-7 w-7 p-0 rounded-full" 
-                      onClick={() => handleRemove(c.id)}
-                      aria-label="Remove"
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </Card>
-                );
-              } else {
-                return (
-                  <Link href="/" key={`empty-${i}`} className="block h-full focus:outline-none">
-                    <Card className="h-full min-h-[100px] flex flex-col items-center justify-center rounded-2xl border-2 border-dashed bg-muted/20 hover:bg-muted/40 transition-colors focus-visible:ring-2 focus-visible:ring-primary/40">
-                      <Plus className="h-6 w-6 text-muted-foreground mb-1" />
-                      <span className="text-sm font-medium text-muted-foreground">Add a college</span>
-                    </Card>
-                  </Link>
-                );
-              }
-            })}
-          </div>
-
-          {selected.length > 0 && (
-            <>
-              <CompareTable colleges={selected} onRemove={handleRemove} />
-              <CompareChart colleges={selected} />
-            </>
-          )}
+          <CompareTable colleges={selected} onRemove={handleRemove} />
+          <CompareChart colleges={selected} />
         </div>
       )}
     </div>

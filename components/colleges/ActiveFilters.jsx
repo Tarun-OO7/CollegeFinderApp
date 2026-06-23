@@ -2,9 +2,9 @@
 
 import { X } from 'lucide-react';
 import { formatINR } from '@/lib/format';
-import { Button } from '@/components/ui/Button';
 
-// Renders the current filter set as dismissable chips. Receives normalized props from page.
+const YELLOW = '#F5C800';
+
 export default function ActiveFilters({ query, filters, sort, onClear, feeCeiling }) {
   const chips = [];
   if (query) chips.push({ key: 'q', label: `"${query}"`, onClear: () => onClear('q') });
@@ -20,25 +20,27 @@ export default function ActiveFilters({ query, filters, sort, onClear, feeCeilin
   if (chips.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-2 mb-4">
-      <span className="text-[11px] uppercase tracking-wider text-muted-foreground">Active</span>
+    <div className="flex flex-wrap items-center gap-2 mb-5">
+      <span className="text-[10px] font-extrabold uppercase tracking-[0.22em]" style={{ color: YELLOW }}>Active</span>
       {chips.map((c) => (
-        <Button
+        <button
           key={c.key}
           onClick={c.onClear}
-          variant="secondary"
-          size="sm"
-          className="group inline-flex items-center gap-1 rounded-full pl-2.5 pr-1.5 py-1 text-xs font-medium"
+          className="group inline-flex items-center gap-1.5 pl-2.5 pr-1.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white hover:bg-[#F5C800] hover:text-black transition-colors"
+          style={{ background: '#1A1A1A', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 2 }}
         >
           {c.label}
-          <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-            <X className="h-2.5 w-2.5" />
+          <span
+            className="inline-flex h-4 w-4 items-center justify-center text-white/80 group-hover:text-black"
+            style={{ borderRadius: 2 }}
+          >
+            <X className="h-2.5 w-2.5" strokeWidth={3} />
           </span>
-        </Button>
+        </button>
       ))}
-      <Button variant="ghost" size="sm" onClick={() => onClear('all')} className="text-xs underline-offset-2 hover:underline">
+      <button onClick={() => onClear('all')} className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-white/50 hover:text-[#F5C800] transition-colors">
         Clear all
-      </Button>
+      </button>
     </div>
   );
 }

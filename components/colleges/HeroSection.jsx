@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Building2, MapPin, Trophy, Sparkles, Search, X } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Building2, MapPin, Trophy, Sparkles } from 'lucide-react';
+import SplitText from '@/components/SplitText';
 
-// Animated counter that eases from 0 to the target value once on mount.
+const YELLOW = '#F5C800';
+
 function useCountUp(target, duration = 900) {
   const [v, setV] = useState(0);
   useEffect(() => {
@@ -21,136 +22,66 @@ function useCountUp(target, duration = 900) {
   return v;
 }
 
-const QUICK_LINKS = [
-  { label: 'IIT Delhi', search: 'Indian Institute of Technology, Delhi' },
-  { label: 'NIT Trichy', search: 'National Institute of Technology, Tiruchirappalli' },
-  { label: 'VIT Vellore', search: 'Vellore Institute of Technology' },
-];
-
-export default function HeroSection({
-  totalColleges = 0,
-  totalStates = 0,
-  topRating = 0,
-  totalRecruiters = 0,
-  searchValue = '',
-  onSearchChange,
-}) {
+export default function HeroSection({ totalColleges = 0, totalStates = 0, topRating = 0, totalRecruiters = 0 }) {
   const c = useCountUp(totalColleges);
   const s = useCountUp(totalStates);
-  const r = useCountUp(Math.round(topRating * 10)); // store one decimal
+  const r = useCountUp(Math.round(topRating * 10));
   const rec = useCountUp(totalRecruiters);
-
-  const hasValue = Boolean(searchValue);
 
   return (
     <section
-      className="relative isolate overflow-hidden rounded-3xl"
-      style={{ background: '#0E1117', border: '0.5px solid #2E3347' }}
+      className="relative isolate overflow-hidden text-white"
+      style={{ background: '#0A0A0A', borderRadius: 4 }}
     >
-      {/* Decorative grid */}
-      <div className="pointer-events-none absolute inset-0 bg-grid-faint opacity-[0.15] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+      {/* Subtle decorative grid — white at 4% opacity, masked */}
+      <div className="pointer-events-none absolute inset-0 bg-grid-faint opacity-50 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+
+      {/* Top strip with NIRF source badge */}
+      <div className="flex flex-wrap items-center gap-2 border-b border-white/10 px-6 py-4 sm:px-10">
+        <span
+          className="inline-flex items-center px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-black"
+          style={{ background: YELLOW, borderRadius: 2 }}
+        >
+          NIRF 2024 Rankings
+        </span>
+        <span className="text-[11px] uppercase tracking-wider text-white/60">Demo data for illustration</span>
+        <span className="ml-auto hidden sm:inline-flex items-center text-[10px] uppercase tracking-[0.22em] text-white/40">
+          Editorial · India 2026
+        </span>
+      </div>
 
       <div className="relative px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          {/* Left content */}
-          <div className="max-w-2xl animate-fade-in-up flex-1">
-            {/* NIRF badge — plain text, no pill */}
-            <span
-              className="inline-flex items-center gap-1.5 text-[11px] font-medium"
-              style={{ color: '#C6A84B', letterSpacing: '0.05em' }}
-            >
-              <Sparkles className="h-3 w-3" style={{ color: '#C6A84B' }} />
-              <span>NIRF · 2025 data · Updated June 2026</span>
-            </span>
-
-            {/* Headline — 48px / 500 */}
-            <h1
-              className="mt-5 font-display leading-[1.08] tracking-tight text-balance"
-              style={{ fontSize: '48px', fontWeight: 500, color: '#F0EDE6' }}
-            >
-              Find your college.
-            </h1>
-
-            {/* Subtitle – 16px, muted */}
-            <p
-              className="mt-3"
-              style={{ fontSize: '16px', color: '#5A5D6B' }}
-            >
-              Compare 500+ Indian colleges by fees, placements &amp; location
-            </p>
-
-            {/* Search bar */}
-            <div className="relative mt-6 w-full group">
-              <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2" style={{ color: '#5A5D6B' }} />
-              <input
-                type="text"
-                value={searchValue || ''}
-                onChange={(e) => onSearchChange?.(e.target.value)}
-                placeholder="Search by name, city or state..."
-                aria-label="Search colleges"
-                className="w-full pl-12 pr-28 text-base transition-shadow focus-visible:ring-2 focus-visible:ring-offset-0"
-                style={{
-                  minHeight: '52px',
-                  background: '#1A1F2E',
-                  border: '0.5px solid #2E3347',
-                  borderRadius: '10px',
-                  color: '#F0EDE6',
-                }}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <div className="pl-5 sm:pl-6" style={{ borderLeft: `6px solid ${YELLOW}` }}>
+              <SplitText
+                text="Find your college."
+                tag="h1"
+                className="font-headline text-[clamp(2.75rem,9vw,7rem)] font-black uppercase leading-[0.92] tracking-tight text-white"
+                textAlign="left"
+                delay={32}
+                duration={1.0}
+                ease="power3.out"
+                from={{ opacity: 0, y: 56 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.2}
+                rootMargin="0px"
               />
-              {hasValue && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => onSearchChange?.('')}
-                  className="absolute right-[108px] top-1/2 -translate-y-1/2 inline-flex h-7 w-7 items-center justify-center rounded-full"
-                  style={{ color: '#5A5D6B' }}
-                  aria-label="Clear search"
-                >
-                  <X className="h-3.5 w-3.5" />
-                </Button>
-              )}
-              <button
-                type="button"
-                onClick={() => {/* search is live */}}
-                className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex h-10 items-center gap-2 px-5 text-sm font-semibold shadow-sm transition-all hover:opacity-90 active:scale-[0.97]"
-                style={{
-                  background: '#C6A84B',
-                  color: '#0E1117',
-                  borderRadius: '6px',
-                }}
-              >
-                <Search className="h-4 w-4" />
-                Search
-              </button>
             </div>
-
-            {/* Quick-link chips — square corners, transparent bg */}
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="text-xs mr-1" style={{ color: '#5A5D6B' }}>Popular:</span>
-              {QUICK_LINKS.map(({ label, search }) => (
-                <button
-                  key={label}
-                  type="button"
-                  onClick={() => onSearchChange?.(search)}
-                  className="inline-flex items-center px-3 py-1.5 text-xs font-medium transition-all hover:opacity-80 active:scale-95"
-                  style={{
-                    border: '0.5px solid #2E3347',
-                    color: '#5A5D6B',
-                    background: 'transparent',
-                    borderRadius: '4px',
-                  }}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            <p className="mt-6 max-w-xl text-base text-[#AAAAAA] sm:text-lg leading-relaxed">
+              Browse, filter and compare India's top NIRF-ranked engineering institutes — IITs, NITs, IIITs and leading private universities — in one editorial workspace.
+            </p>
           </div>
 
-          {/* Stat grid */}
-          <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:max-w-md animate-fade-in-up" style={{ animationDelay: '120ms' }}>
+          <dl className="grid grid-cols-2 gap-3 lg:max-w-md">
+            <div className="col-span-2 -mb-1 flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.22em]" style={{ color: YELLOW }}>
+              <span aria-hidden>📊</span>
+              <span>Live stats</span>
+              <span className="inline-block h-[2px] w-10" style={{ background: YELLOW }} />
+            </div>
             <StatCard icon={<Building2 className="h-4 w-4" />}  label="Colleges"   value={c} />
             <StatCard icon={<MapPin className="h-4 w-4" />}    label="States"     value={s} />
-            <StatCard icon={<Trophy className="h-4 w-4" />}    label="Top Rating" value={(r / 10).toFixed(1)} suffix=" / 5" isRating />
+            <StatCard icon={<Trophy className="h-4 w-4" />}    label="Top Rating" value={(r / 10).toFixed(1)} suffix=" / 5" />
             <StatCard icon={<Sparkles className="h-4 w-4" />}  label="Recruiters" value={rec} />
           </dl>
         </div>
@@ -159,16 +90,17 @@ export default function HeroSection({
   );
 }
 
-function StatCard({ icon, label, value, suffix = '', isRating = false }) {
+function StatCard({ icon, label, value, suffix = '' }) {
   return (
-    <div className="flex flex-col justify-center">
-      <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#5A5D6B' }}>
+    <div
+      className="relative p-4 transition-colors"
+      style={{ background: '#0A0A0A', border: '1px solid rgba(255,255,255,0.08)', borderLeft: `3px solid ${YELLOW}`, borderRadius: 4 }}
+    >
+      <div className="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[0.22em]" style={{ color: YELLOW }}>
+        <span aria-hidden>{icon}</span>
         {label}
       </div>
-      <div
-        className="font-display tabular-nums"
-        style={{ fontSize: '26px', fontWeight: 500, color: isRating ? '#C6A84B' : '#F0EDE6', lineHeight: 1.1 }}
-      >
+      <div className="mt-2 font-headline text-2xl uppercase tracking-tight tabular-nums text-white">
         {value}{suffix}
       </div>
     </div>

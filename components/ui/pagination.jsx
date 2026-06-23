@@ -1,105 +1,98 @@
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+'use client';
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Pagination = ({
-  className,
-  ...props
-}) => (
-  <nav
-    role="navigation"
-    aria-label="pagination"
-    className={cn("mx-auto flex w-full justify-center", className)}
-    {...props} />
-)
-Pagination.displayName = "Pagination"
+// Generates a window of page numbers with leading/trailing ellipses.
+// Output examples (siblings=1):
+//   total=5,  current=3 → [1,2,3,4,5]
+//   total=10, current=1 → [1,2,3,'…',10]
+//   total=10, current=5 → [1,'…',4,5,6,'…',10]
+//   total=10, current=10→ [1,'…',8,9,10]
+function buildPages(currentPage, totalPages, siblings = 1) {
+  if (totalPages <= 7) return Array.from({ length: totalPages }, (_, i) => i + 1);
 
-const PaginationContent = React.forwardRef(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    className={cn("flex flex-row items-center gap-1", className)}
-    {...props} />
-))
-PaginationContent.displayName = "PaginationContent"
+  const left = Math.max(currentPage - siblings, 2);
+  const right = Math.min(currentPage + siblings, totalPages - 1);
+  const pages = [1];
 
-const PaginationItem = React.forwardRef(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
-))
-PaginationItem.displayName = "PaginationItem"
+  if (left > 2) pages.push('left-ellipsis');
+  for (let i = left; i <= right; i++) pages.push(i);
+  if (right < totalPages - 1) pages.push('right-ellipsis');
 
-const PaginationLink = ({
-  className,
-  isActive,
-  size = "icon",
-  ...props
-}) => (
-  <a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors hover:opacity-80 cursor-pointer",
-      className
-    )}
-    style={
-      isActive
-        ? { background: '#1A1714', color: '#F8F6F1', borderRadius: '4px', padding: '4px 10px' }
-        : { color: '#8A8377', background: 'transparent', padding: '4px 10px' }
-    }
-    {...props} />
-)
-PaginationLink.displayName = "PaginationLink"
+  pages.push(totalPages);
+  return pages;
+}
 
-const PaginationPrevious = ({
-  className,
-  ...props
-}) => (
-  <a
-    aria-label="Go to previous page"
-    className={cn("inline-flex items-center justify-center whitespace-nowrap text-sm gap-1 cursor-pointer transition-colors hover:opacity-80", className)}
-    style={{ color: '#C6A84B', fontWeight: 500, background: 'transparent', padding: '4px 10px' }}
-    {...props}>
-    <ChevronLeft className="h-4 w-4" />
-    <span>Previous</span>
-  </a>
-)
-PaginationPrevious.displayName = "PaginationPrevious"
+export default function Pagination({ currentPage, totalPages, onPageChange }) {
+  // Defensive: ensure valid integers and a usable range.
+  const total = Math.max(1, Number(totalPages) || 1);
+  const current = Math.min(Math.max(1, Number(currentPage) || 1), total);
+  if (total <= 1) return null;
 
-const PaginationNext = ({
-  className,
-  ...props
-}) => (
-  <a
-    aria-label="Go to next page"
-    className={cn("inline-flex items-center justify-center whitespace-nowrap text-sm gap-1 cursor-pointer transition-colors hover:opacity-80", className)}
-    style={{ color: '#C6A84B', fontWeight: 500, background: 'transparent', padding: '4px 10px' }}
-    {...props}>
-    <span>Next</span>
-    <ChevronRight className="h-4 w-4" />
-  </a>
-)
-PaginationNext.displayName = "PaginationNext"
+  const pages = buildPages(current, total);
+  const go = (p) => {
+    if (p < 1 || p > total || p === current) return;
+    onPageChange?.(p);
+  };
 
-const PaginationEllipsis = ({
-  className,
-  ...props
-}) => (
-  <span
-    aria-hidden
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}>
-    <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
-  </span>
-)
-PaginationEllipsis.displayName = "PaginationEllipsis"
+  return (
+    <nav className="mt-8 flex items-center justify-between gap-3" aria-label="Pagination">
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => go(current - 1)}
+        disabled={current === 1}
+        className="gap-1"
+      >
+        <ChevronLeft className="h-4 w-4" />
+        <span className="hidden sm:inline">Previous</span>
+      </Button>
 
-export {
-  Pagination,
-  PaginationContent,
-  PaginationLink,
-  PaginationItem,
-  PaginationPrevious,
-  PaginationNext,
-  PaginationEllipsis,
+      {/* Mobile: compact current/total indicator */}
+      <div className="sm:hidden text-sm text-muted-foreground">
+        Page <span className="font-medium text-foreground">{current}</span> of{' '}
+        <span className="font-medium text-foreground">{total}</span>
+      </div>
+
+      {/* Desktop: numbered page buttons with ellipsis */}
+      <ul className="hidden sm:flex items-center gap-1">
+        {pages.map((p, idx) => {
+          if (typeof p === 'string') {
+            return (
+              <li key={`${p}-${idx}`} aria-hidden="true">
+                <span className="inline-flex h-9 w-9 items-center justify-center text-sm text-muted-foreground">…</span>
+              </li>
+            );
+          }
+          const active = p === current;
+          return (
+            <li key={p}>
+              <Button
+                variant={active ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => go(p)}
+                aria-current={active ? 'page' : undefined}
+                aria-label={`Go to page ${p}`}
+                className="h-9 w-9 p-0"
+              >
+                {p}
+              </Button>
+            </li>
+          );
+        })}
+      </ul>
+
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => go(current + 1)}
+        disabled={current === total}
+        className="gap-1"
+      >
+        <span className="hidden sm:inline">Next</span>
+        <ChevronRight className="h-4 w-4" />
+      </Button>
+    </nav>
+  );
 }

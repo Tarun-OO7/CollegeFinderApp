@@ -253,8 +253,7 @@ const SidebarRail = React.forwardRef(({ className, ...props }, ref) => {
   const { toggleSidebar } = useSidebar()
 
   return (
-    <Button
-      variant="ghost"
+    <button
       ref={ref}
       data-sidebar="rail"
       aria-label="Toggle Sidebar"

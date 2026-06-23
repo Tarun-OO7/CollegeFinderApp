@@ -3,20 +3,16 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import colleges from '@/data/colleges.json';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import SplitText from '@/components/SplitText';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { MapPin, Star, IndianRupee, ArrowLeft, GitCompareArrows, Check, Sparkles, TrendingUp, GraduationCap, Briefcase } from 'lucide-react';
+import { MapPin, ArrowLeft, GitCompareArrows, Check, GraduationCap, Briefcase } from 'lucide-react';
 import { formatINR, formatRating, safe } from '@/lib/format';
 import { addCompareId, getCompareIds, MAX_COMPARE, removeCompareId } from '@/lib/compareStore';
 import { useToast } from '@/hooks/use-toast';
 
-const TYPE_GRADIENT = {
-  Govt:    'from-indigo-500 via-violet-500 to-fuchsia-500',
-  Private: 'from-emerald-500 via-teal-500 to-cyan-500',
-  Deemed:  'from-amber-500 via-orange-500 to-rose-500',
-};
+// Reven-inspired editorial palette — locked to this page only.
+const INK    = '#0A0A0A';
+const YELLOW = '#F5C800';
 
 export default function CollegeDetailPage() {
   const { id } = useParams();
@@ -31,12 +27,15 @@ export default function CollegeDetailPage() {
   if (!college) {
     return (
       <div className="container py-24 text-center">
-        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-4">
-          <GraduationCap className="h-7 w-7" />
-        </div>
-        <h1 className="font-display text-2xl font-bold mb-2">College not found</h1>
+        <h1 className="font-headline text-4xl uppercase tracking-tight mb-2">College not found</h1>
         <p className="text-muted-foreground mb-6">The college you&apos;re looking for doesn&apos;t exist.</p>
-        <Button onClick={() => router.push('/')} className="rounded-xl">Back to listing</Button>
+        <button
+          onClick={() => router.push('/')}
+          className="inline-flex items-center gap-2 bg-[#F5C800] px-5 py-2.5 text-sm font-extrabold uppercase tracking-wider text-black"
+          style={{ borderRadius: 4 }}
+        >
+          Back to browse
+        </button>
       </div>
     );
   }
@@ -57,160 +56,300 @@ export default function CollegeDetailPage() {
     toast({ title: 'Added to compare', description: 'View your comparison from the top nav.' });
   };
 
-  const gradient = TYPE_GRADIENT[college.type] || TYPE_GRADIENT.Govt;
   const p = college.placements || { topRecruiters: [] };
+  const recruiters = p.topRecruiters || [];
+  const courses = college.courses || [];
 
   return (
-    <div className="container py-6 sm:py-10 max-w-6xl">
-      <Button variant="ghost" size="sm" className="mb-4 gap-1.5 -ml-2" onClick={() => router.back()}>
-        <ArrowLeft className="h-4 w-4" /> Back to browse
-      </Button>
+    <div className="bg-white">
+      <div className="container py-6 sm:py-10 max-w-6xl">
+        {/* Back link — yellow arrow */}
+        <button
+          onClick={() => router.back()}
+          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-black hover:text-neutral-700 transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" style={{ color: YELLOW }} strokeWidth={3} />
+          Back to browse
+        </button>
 
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft animate-fade-in-up">
-        <div className={`h-2 w-full bg-gradient-to-r ${gradient}`} />
-        <div className="relative bg-hero-mesh">
-          <div className="pointer-events-none absolute inset-0 bg-grid-faint opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
-          <div className="relative p-6 sm:p-10">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-              <div className="min-w-0 space-y-3">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-background/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-foreground ring-1 ring-border">
-                    {safe(college.type)}
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-background/80 px-2.5 py-1 text-[10px] text-muted-foreground ring-1 ring-border">
-                    <MapPin className="h-3 w-3" /> {safe(college.location)}, {safe(college.state)}
-                  </span>
-                </div>
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] text-balance max-w-3xl">
-                  {college.name}
-                </h1>
-                <p className="max-w-2xl text-sm sm:text-base text-muted-foreground">{safe(college.overview, 'No overview available.')}</p>
+        {/* HERO — deep black with yellow accent stripe on college name */}
+        <section
+          className="relative overflow-hidden text-white"
+          style={{ background: INK, borderRadius: 4 }}
+        >
+          {/* Top black bar with rank / type / location tags */}
+          <div className="flex flex-wrap items-center gap-2 border-b border-white/10 px-6 py-4 sm:px-10">
+            {typeof college.rank === 'number' && (
+              <div
+                className="inline-flex items-stretch overflow-hidden text-[11px] font-extrabold uppercase tracking-wider"
+                style={{ borderRadius: 2 }}
+              >
+                <span
+                  className="inline-flex items-center px-2 py-1 text-black"
+                  style={{ background: YELLOW }}
+                >
+                  #{college.rank}
+                </span>
+                <span
+                  className="inline-flex items-center px-2 py-1 text-white"
+                  style={{ background: '#000', letterSpacing: '0.18em' }}
+                >
+                  NIRF 2024
+                </span>
               </div>
-              <Button onClick={handleCompare} size="lg" className={`gap-2 rounded-xl ${inCompare ? '' : 'shadow-glow'}`} variant={inCompare ? 'secondary' : 'default'}>
-                {inCompare ? <Check className="h-4 w-4" /> : <GitCompareArrows className="h-4 w-4" />}
+            )}
+            <span
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white"
+              style={{ background: '#000', borderRadius: 2 }}
+            >
+              <span aria-hidden>🏛️</span> {safe(college.type)}
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-white/70">
+              <MapPin className="h-3 w-3" /> {safe(college.location)}, {safe(college.state)}
+            </span>
+            <span className="ml-auto hidden sm:inline-flex items-center text-[10px] uppercase tracking-[0.22em] text-white/40">
+              NIRF 2024 · Profile
+            </span>
+          </div>
+
+          {/* Headline + CTA */}
+          <div className="px-6 py-10 sm:px-10 sm:py-14 lg:py-16">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+              <div className="min-w-0 flex-1">
+                <div className="pl-5 sm:pl-6" style={{ borderLeft: `6px solid ${YELLOW}` }}>
+                  <SplitText
+                    text={college.name}
+                    tag="h1"
+                    className="font-headline text-[clamp(2.5rem,7vw,6rem)] font-black uppercase leading-[0.92] tracking-tight text-white"
+                    textAlign="left"
+                    delay={28}
+                    duration={0.9}
+                    ease="power3.out"
+                    from={{ opacity: 0, y: 48 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.2}
+                    rootMargin="0px"
+                  />
+                </div>
+                <p className="mt-6 max-w-2xl text-sm sm:text-base text-white/70 leading-relaxed">
+                  {safe(college.overview, 'No overview available.')}
+                </p>
+              </div>
+
+              {/* Add to Compare — sharp yellow */}
+              <button
+                onClick={handleCompare}
+                className="group inline-flex shrink-0 items-center gap-2 px-5 py-3 text-sm font-extrabold uppercase tracking-wider transition-colors"
+                style={{
+                  background: inCompare ? '#fff' : YELLOW,
+                  color: '#000',
+                  borderRadius: 4,
+                }}
+              >
+                {inCompare ? <Check className="h-4 w-4" strokeWidth={3} /> : <GitCompareArrows className="h-4 w-4" strokeWidth={3} />}
                 {inCompare ? 'In Compare' : 'Add to Compare'}
-              </Button>
+              </button>
             </div>
 
-            {/* Hero stat row */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <HeroStat icon={<Star className="h-4 w-4 fill-amber-500 text-amber-500" />} label="Rating" value={formatRating(college.rating)} suffix={typeof college.rating === 'number' ? ' / 5' : ''} />
-              <HeroStat icon={<IndianRupee className="h-4 w-4 text-indigo-500" />} label="Total Fees" value={formatINR(college.totalFees)} />
-              <HeroStat icon={<TrendingUp className="h-4 w-4 text-emerald-500" />} label="Avg Package" value={formatINR(p.averagePackage)} />
-              <HeroStat icon={<Sparkles className="h-4 w-4 text-rose-500" />} label="Highest Package" value={formatINR(p.highestPackage)} />
+            {/* Stat cards — black bg, yellow labels, white values */}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <HeroStat emoji="⭐" label="Rating" value={formatRating(college.rating)} suffix={typeof college.rating === 'number' ? ' / 5' : ''} />
+              <HeroStat emoji="💰" label="Total Fees" value={formatINR(college.totalFees)} />
+              <HeroStat emoji="💼" label="Avg Package" value={formatINR(p.averagePackage)} />
+              <HeroStat emoji="✨" label="Highest Package" value={formatINR(p.highestPackage)} />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tabs */}
-      <Tabs defaultValue="overview" className="mt-8">
-        <TabsList className="grid w-full grid-cols-3 sm:w-auto sm:inline-flex rounded-xl bg-muted/60 p-1">
-          <TabsTrigger value="overview" className="rounded-lg data-[state=active]:shadow-soft">Overview</TabsTrigger>
-          <TabsTrigger value="courses"  className="rounded-lg data-[state=active]:shadow-soft">Courses</TabsTrigger>
-          <TabsTrigger value="placements" className="rounded-lg data-[state=active]:shadow-soft">Placements</TabsTrigger>
-        </TabsList>
+        {/* TABS — yellow bottom border on active */}
+        <Tabs defaultValue="overview" className="mt-10">
+          <TabsList
+            className="inline-flex h-auto items-end gap-0 rounded-none border-b border-black/15 bg-transparent p-0"
+          >
+            {[
+              { v: 'overview',  label: 'Overview' },
+              { v: 'courses',   label: 'Courses' },
+              { v: 'placements', label: 'Placements' },
+            ].map((t) => (
+              <TabsTrigger
+                key={t.v}
+                value={t.v}
+                className="rounded-none border-b-[3px] border-transparent bg-transparent px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-neutral-500 data-[state=active]:bg-transparent data-[state=active]:text-black data-[state=active]:shadow-none transition-colors"
+                style={{}}
+                data-yellow-border
+              >
+                {t.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
-        <TabsContent value="overview">
-          <Card className="rounded-2xl border-border/60">
-            <CardContent className="pt-6 space-y-6">
-              <p className="text-sm sm:text-base leading-relaxed text-foreground/80">{safe(college.overview, 'No overview available.')}</p>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <DetailStat label="Type" value={safe(college.type)} />
-                <DetailStat label="State" value={safe(college.state)} />
-                <DetailStat label="Rating" value={formatRating(college.rating)} />
-                <DetailStat label="Total Fees" value={formatINR(college.totalFees)} />
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
+          <TabsContent value="overview" className="mt-8">
+            <p className="text-sm sm:text-base leading-relaxed text-black/80 max-w-3xl">
+              {safe(college.overview, 'No overview available.')}
+            </p>
 
-        <TabsContent value="courses">
-          <Card className="rounded-2xl border-border/60">
-            <CardContent className="pt-6">
-              {(!college.courses || college.courses.length === 0) ? (
-                <p className="text-muted-foreground text-sm">No courses available.</p>
+            {/* Info grid — thin yellow left-border cells */}
+            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
+              <InfoRow label="Type"        value={safe(college.type)} />
+              <InfoRow label="State"       value={safe(college.state)} />
+              <InfoRow label="Rating"      value={formatRating(college.rating)} />
+              <InfoRow label="Total Fees"  value={formatINR(college.totalFees)} />
+            </div>
+
+            {/* Courses preview */}
+            <div className="mt-12">
+              <SectionLabel emoji="🎓">Courses Offered</SectionLabel>
+              <CoursesList courses={courses} />
+            </div>
+          </TabsContent>
+
+          <TabsContent value="courses" className="mt-8">
+            <SectionLabel emoji="🎓">Courses Offered</SectionLabel>
+            <CoursesList courses={courses} />
+          </TabsContent>
+
+          <TabsContent value="placements" className="mt-8 space-y-10">
+            {/* Package cards — black with yellow accent */}
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <PackageBlock emoji="💼" label="Average Package" value={formatINR(p.averagePackage)} />
+              <PackageBlock emoji="✨" label="Highest Package" value={formatINR(p.highestPackage)} />
+            </div>
+
+            {/* Recruiters — solid yellow tags with black text */}
+            <div>
+              <SectionLabel emoji="💼">
+                Top Recruiters <span className="text-black/40 font-normal normal-case tracking-normal ml-1">({recruiters.length})</span>
+              </SectionLabel>
+              {recruiters.length === 0 ? (
+                <p className="mt-3 text-sm text-black/60">Recruiter data unavailable</p>
               ) : (
-                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {college.courses.map((c, i) => (
-                    <li key={i} className="flex items-start justify-between gap-3 rounded-xl border border-border/60 bg-card p-4 transition-colors hover:border-primary/40">
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                            <GraduationCap className="h-4 w-4" />
-                          </span>
-                          <div>
-                            <div className="font-medium leading-tight">{safe(c.name)}</div>
-                            <div className="text-xs text-muted-foreground">{safe(c.duration)}</div>
-                          </div>
-                        </div>
-                      </div>
-                      <Badge variant="outline" className="rounded-full whitespace-nowrap">{formatINR(c.fees)}</Badge>
-                    </li>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {recruiters.map((r) => (
+                    <span
+                      key={r}
+                      className="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-black"
+                      style={{ background: YELLOW, borderRadius: 2 }}
+                    >
+                      {r}
+                    </span>
                   ))}
-                </ul>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="placements">
-          <Card className="rounded-2xl border-border/60">
-            <CardContent className="pt-6 space-y-6">
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <PackageCard label="Average Package" value={formatINR(p.averagePackage)} accent="from-emerald-500 to-teal-500" />
-                <PackageCard label="Highest Package" value={formatINR(p.highestPackage)} accent="from-fuchsia-500 to-rose-500" />
-              </div>
-              <div>
-                <div className="mb-3 flex items-center gap-2">
-                  <Briefcase className="h-4 w-4 text-muted-foreground" />
-                  <span className="font-display text-sm font-semibold tracking-tight">Top Recruiters</span>
                 </div>
-                {(!p.topRecruiters || p.topRecruiters.length === 0) ? (
-                  <p className="text-sm text-muted-foreground">N/A</p>
-                ) : (
-                  <div className="flex flex-wrap gap-2">
-                    {p.topRecruiters.map((r) => (
-                      <Badge key={r} variant="secondary" className="rounded-full px-3 py-1 text-xs">{r}</Badge>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
-    </div>
-  );
-}
-
-function HeroStat({ icon, label, value, suffix = '' }) {
-  return (
-    <div className="rounded-2xl border border-border/60 bg-background/80 p-4 backdrop-blur">
-      <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground">
-        {icon}<span>{label}</span>
+              )}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
-      <div className="mt-1 font-display text-xl font-bold tabular-nums">{value}{suffix}</div>
+
+      {/* Scoped CSS: active tab gets thick yellow bottom border (Radix data-state) */}
+      <style jsx global>{`
+        [data-yellow-border][data-state="active"] {
+          border-bottom-color: ${YELLOW} !important;
+        }
+      `}</style>
     </div>
   );
 }
 
-function DetailStat({ label, value }) {
+function HeroStat({ emoji, label, value, suffix = '' }) {
   return (
-    <div className="rounded-xl border border-border/60 bg-muted/30 p-3">
-      <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="mt-0.5 font-semibold">{value}</div>
+    <div
+      className="p-4"
+      style={{ background: '#000', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 4 }}
+    >
+      <div
+        className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em]"
+        style={{ color: YELLOW }}
+      >
+        <span aria-hidden>{emoji}</span>
+        <span>{label}</span>
+      </div>
+      <div className="mt-2 font-headline text-2xl sm:text-3xl uppercase tracking-tight tabular-nums text-white">
+        {value}{suffix}
+      </div>
     </div>
   );
 }
 
-function PackageCard({ label, value, accent }) {
+function InfoRow({ label, value }) {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5">
-      <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${accent}`} />
-      <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="mt-2 font-display text-3xl font-bold tabular-nums">{value}</div>
+    <div className="pl-4" style={{ borderLeft: `2px solid ${YELLOW}` }}>
+      <div className="text-[10px] font-bold uppercase tracking-[0.22em]" style={{ color: '#A8870A' }}>
+        {label}
+      </div>
+      <div className="mt-1 font-headline text-xl uppercase tracking-tight text-black">
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function SectionLabel({ emoji, children }) {
+  return (
+    <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.22em]" style={{ color: '#A8870A' }}>
+      {emoji && <span aria-hidden>{emoji}</span>}
+      <span>{children}</span>
+      <span className="ml-2 inline-block h-[2px] w-10" style={{ background: YELLOW }} />
+    </div>
+  );
+}
+
+function CoursesList({ courses }) {
+  if (!courses || courses.length === 0) {
+    return <p className="mt-4 text-sm text-black/60">No courses listed.</p>;
+  }
+  return (
+    <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      {courses.map((c, i) => (
+        <li
+          key={i}
+          className="flex items-start justify-between gap-3 p-4 text-white"
+          style={{ background: '#0A0A0A', borderRadius: 4 }}
+        >
+          <div className="min-w-0 flex items-start gap-3">
+            <span
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center"
+              style={{ background: YELLOW, color: '#000', borderRadius: 4 }}
+            >
+              <GraduationCap className="h-5 w-5" strokeWidth={2.5} />
+            </span>
+            <div className="min-w-0">
+              <div className="font-headline text-base uppercase leading-tight tracking-tight">
+                {safe(c.name)}
+              </div>
+              <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-white/60">
+                {safe(c.duration)}
+              </div>
+            </div>
+          </div>
+          <span
+            className="shrink-0 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-black"
+            style={{ background: YELLOW, borderRadius: 2 }}
+          >
+            {safe(c.degreeType, 'UG')}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PackageBlock({ emoji, label, value }) {
+  return (
+    <div
+      className="relative overflow-hidden p-6 text-white"
+      style={{ background: '#0A0A0A', borderRadius: 4 }}
+    >
+      <span
+        className="absolute left-0 top-0 h-full"
+        style={{ width: 6, background: YELLOW }}
+        aria-hidden
+      />
+      <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.22em]" style={{ color: YELLOW }}>
+        <span aria-hidden>{emoji}</span><span>{label}</span>
+      </div>
+      <div className="mt-3 font-headline text-4xl sm:text-5xl uppercase tracking-tight tabular-nums">
+        {value}
+      </div>
     </div>
   );
 }

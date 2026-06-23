@@ -4,13 +4,13 @@ import { useEffect, useMemo, useRef, useState, Suspense } from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import colleges from '@/data/colleges.json';
 import CollegeCard from '@/components/colleges/CollegeCard';
-
+import SearchBar from '@/components/colleges/SearchBar';
 import FilterPanel from '@/components/colleges/FilterPanel';
 import HeroSection from '@/components/colleges/HeroSection';
 import ActiveFilters from '@/components/colleges/ActiveFilters';
-import Pagination from '@/components/ui/pagination-wrapper';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import WhySection from '@/components/colleges/WhySection';
+import ScrollIndicator from '@/components/ScrollIndicator';
+import Pagination from '@/components/ui/Pagination';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { SlidersHorizontal, SearchX, ArrowUpDown } from 'lucide-react';
@@ -19,6 +19,13 @@ const FEE_CEILING = 2000000;
 const INITIAL_FILTERS = { state: 'all', type: 'all', maxFees: FEE_CEILING, minRating: 0 };
 const DEFAULT_SORT = 'rating-desc';
 const PAGE_SIZE = 12;
+const YELLOW = '#F5C800';
+
+const NAV_SECTIONS = [
+  { id: 'hero',  label: 'Hero' },
+  { id: 'why',   label: 'Why' },
+  { id: 'picks', label: 'Top Picks' },
+];
 
 function readFromUrl(sp) {
   return {
@@ -76,18 +83,17 @@ function HomeInner() {
     return Array.from(s).sort();
   }, []);
 
-  // Pre-computed metrics for the hero (kept here so HeroSection stays pure).
   const heroStats = useMemo(() => {
     const totalColleges = colleges.length;
-    const states = new Set();
+    const stateSet = new Set();
     const recruiters = new Set();
     let top = 0;
     colleges.forEach((c) => {
-      if (c?.state) states.add(c.state);
+      if (c?.state) stateSet.add(c.state);
       if (typeof c?.rating === 'number') top = Math.max(top, c.rating);
       (c?.placements?.topRecruiters || []).forEach((r) => recruiters.add(r));
     });
-    return { totalColleges, totalStates: states.size, topRating: top, totalRecruiters: recruiters.size };
+    return { totalColleges, totalStates: stateSet.size, topRating: top, totalRecruiters: recruiters.size };
   }, []);
 
   const filteredSorted = useMemo(() => {
@@ -142,7 +148,10 @@ function HomeInner() {
   const resetAll = () => { setQuery(''); setFilters(INITIAL_FILTERS); setSort(DEFAULT_SORT); setPage(1); };
   const handlePageChange = (p) => {
     setPage(p);
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      const el = document.getElementById('picks');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
   const clearChip = (key) => {
     if (key === 'q') setQuery('');
@@ -152,102 +161,128 @@ function HomeInner() {
   };
 
   return (
-    <div className="container py-6 sm:py-10 space-y-8">
-      <HeroSection {...heroStats} searchValue={query} onSearchChange={setQuery} />
+    <div className="container py-6 sm:py-8 space-y-10">
+      <ScrollIndicator sections={NAV_SECTIONS} />
 
-      {/* Sort + Mobile Filters */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <Select value={sort} onValueChange={setSort}>
-          <SelectTrigger className="h-12 sm:w-56 gap-2 rounded-xl border-border/70 bg-background shadow-soft">
-            <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
-            <SelectValue placeholder="Sort by" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="rating-desc">Rating (High → Low)</SelectItem>
-            <SelectItem value="fees-asc">Fees (Low → High)</SelectItem>
-            <SelectItem value="fees-desc">Fees (High → Low)</SelectItem>
-            <SelectItem value="name-asc">Name (A → Z)</SelectItem>
-          </SelectContent>
-        </Select>
+      <section id="hero">
+        <HeroSection {...heroStats} />
+      </section>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" className="lg:hidden gap-2 h-12 rounded-xl">
-              <SlidersHorizontal className="h-4 w-4" /> Filters
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left" className="w-80">
-            <SheetHeader><SheetTitle>Filters</SheetTitle></SheetHeader>
-            <div className="mt-4">
-              <FilterPanel filters={filters} onChange={setFilters} states={states} onReset={() => setFilters(INITIAL_FILTERS)} maxFeeCeiling={FEE_CEILING} />
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+      <section id="why">
+        <WhySection />
+      </section>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[300px_1fr]">
-        <aside className="hidden lg:block">
-          <FilterPanel filters={filters} onChange={setFilters} states={states} onReset={() => setFilters(INITIAL_FILTERS)} maxFeeCeiling={FEE_CEILING} />
-        </aside>
-
-        <section>
-          <ActiveFilters query={query} filters={filters} sort={sort} onClear={clearChip} feeCeiling={FEE_CEILING} />
-
-          <div className="mb-5 flex items-center justify-between">
-            <h2
-              className="font-display font-semibold tracking-tight"
-              style={{
-                fontSize: '13px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.06em',
-                color: '#8A8377',
-              }}
-            >
-              {loading ? 'Loading colleges…' : total === 0 ? 'No matches' : 'Top picks for you'}
-            </h2>
-            <span className="text-sm text-muted-foreground tabular-nums">
-              {!loading && total > 0 && `Showing ${startIdx + 1}–${endIdx} of ${total}`}
-            </span>
+      <section id="picks" className="space-y-6">
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex-1">
+            <SearchBar value={query} onChange={setQuery} />
           </div>
 
-          {loading ? (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="h-64 rounded-2xl bg-gradient-to-br from-muted/40 via-muted/60 to-muted/40 bg-[length:400px_100%] animate-shimmer" />
-              ))}
+          <Select value={sort} onValueChange={setSort}>
+            <SelectTrigger
+              className="h-12 sm:w-56 gap-2 bg-[#1A1A1A] border-white/15 text-white hover:border-[#F5C800] transition-colors"
+              style={{ borderRadius: 4 }}
+            >
+              <ArrowUpDown className="h-4 w-4" style={{ color: YELLOW }} strokeWidth={2.5} />
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent className="bg-[#0A0A0A] border-white/15 text-white">
+              <SelectItem value="rating-desc">Rating (High → Low)</SelectItem>
+              <SelectItem value="fees-asc">Fees (Low → High)</SelectItem>
+              <SelectItem value="fees-desc">Fees (High → Low)</SelectItem>
+              <SelectItem value="name-asc">Name (A → Z)</SelectItem>
+            </SelectContent>
+          </Select>
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                className="lg:hidden inline-flex items-center gap-2 h-12 px-4 text-xs font-extrabold uppercase tracking-wider text-white border border-white/15 bg-[#1A1A1A] hover:border-[#F5C800] hover:text-[#F5C800] transition-colors"
+                style={{ borderRadius: 4 }}
+              >
+                <SlidersHorizontal className="h-4 w-4" /> Filters
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-80 bg-[#0A0A0A] border-white/10 text-white">
+              <SheetHeader><SheetTitle className="text-white">Filters</SheetTitle></SheetHeader>
+              <div className="mt-4">
+                <FilterPanel filters={filters} onChange={setFilters} states={states} onReset={() => setFilters(INITIAL_FILTERS)} maxFeeCeiling={FEE_CEILING} />
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[300px_1fr]">
+          <aside className="hidden lg:block">
+            <FilterPanel filters={filters} onChange={setFilters} states={states} onReset={() => setFilters(INITIAL_FILTERS)} maxFeeCeiling={FEE_CEILING} />
+          </aside>
+
+          <div>
+            <ActiveFilters query={query} filters={filters} sort={sort} onClear={clearChip} feeCeiling={FEE_CEILING} />
+
+            <div className="mb-5 flex items-end justify-between">
+              <div>
+                <span
+                  className="inline-flex items-center px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-black"
+                  style={{ background: YELLOW, borderRadius: 2 }}
+                >
+                  Top Picks
+                </span>
+                <h2 className="mt-3 font-headline text-3xl sm:text-4xl uppercase tracking-tight leading-[0.95] text-white">
+                  {loading ? 'Loading…' : total === 0 ? 'No matches' : 'Top picks'}
+                </h2>
+              </div>
+              <span className="text-[11px] uppercase tracking-[0.18em] text-white/50 tabular-nums">
+                {!loading && total > 0 && `Showing ${startIdx + 1}–${endIdx} of ${total}`}
+              </span>
             </div>
-          ) : total === 0 ? (
-            <Card className="rounded-2xl border-dashed border-border bg-muted/20">
-              <CardContent className="flex flex-col items-center justify-center gap-3 py-20 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <SearchX className="h-7 w-7" />
-                </div>
-                <div className="font-display text-lg font-semibold">Nothing matches yet</div>
-                <p className="max-w-xs text-sm text-muted-foreground">Try removing a filter or broadening your search to see more colleges.</p>
-                <Button variant="outline" onClick={resetAll} className="rounded-xl">Reset filters</Button>
-              </CardContent>
-            </Card>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 animate-fade-in">
-                {paged.map((c, i) => (
-                  <div key={c.id} style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }} className="animate-fade-in-up">
-                    <CollegeCard college={c} />
-                  </div>
+
+            {loading ? (
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="h-64" style={{ background: '#1A1A1A', borderRadius: 4 }} />
                 ))}
               </div>
-              <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
-            </>
-          )}
-        </section>
-      </div>
+            ) : total === 0 ? (
+              <div
+                className="flex flex-col items-center justify-center gap-3 py-20 text-center"
+                style={{ background: '#1A1A1A', border: '1px dashed rgba(255,255,255,0.15)', borderRadius: 4 }}
+              >
+                <div className="flex h-14 w-14 items-center justify-center text-black" style={{ background: YELLOW, borderRadius: 4 }}>
+                  <SearchX className="h-7 w-7" strokeWidth={2.5} />
+                </div>
+                <div className="font-headline text-2xl uppercase tracking-tight text-white">Nothing matches yet</div>
+                <p className="max-w-xs text-sm text-white/60">Try removing a filter or broadening your search.</p>
+                <button
+                  onClick={resetAll}
+                  className="mt-2 inline-flex items-center px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-black"
+                  style={{ background: YELLOW, borderRadius: 4 }}
+                >
+                  Reset filters
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 animate-fade-in">
+                  {paged.map((c, i) => (
+                    <div key={c.id} style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }} className="animate-fade-in-up">
+                      <CollegeCard college={c} />
+                    </div>
+                  ))}
+                </div>
+                <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+              </>
+            )}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
 
 export default function HomePage() {
   return (
-    <Suspense fallback={<div className="container py-10 text-muted-foreground">Loading…</div>}>
+    <Suspense fallback={<div className="container py-10 text-white/60">Loading…</div>}>
       <HomeInner />
     </Suspense>
   );

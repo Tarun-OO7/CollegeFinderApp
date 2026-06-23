@@ -1,962 +1,2902 @@
 [
   {
-    "id": "iit-bombay",
-    "name": "Indian Institute of Technology, Bombay",
-    "location": "Mumbai",
-    "state": "Maharashtra",
-    "type": "Govt",
-    "rating": 4.8,
-    "totalFees": 900000,
-    "overview": "IIT Bombay is one of India's premier engineering institutes, known for cutting-edge research and a vibrant campus culture.",
-    "courses": [
-      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 900000 },
-      { "name": "B.Tech Electrical Engineering", "duration": "4 years", "fees": 900000 },
-      { "name": "M.Tech AI & DS", "duration": "2 years", "fees": 200000 }
-    ],
-    "placements": {
-      "averagePackage": 2300000,
-      "highestPackage": 21000000,
-      "topRecruiters": ["Google", "Microsoft", "Goldman Sachs", "Apple"]
-    }
-  },
-  {
-    "id": "iit-delhi",
-    "name": "Indian Institute of Technology, Delhi",
-    "location": "New Delhi",
-    "state": "Delhi",
-    "type": "Govt",
-    "rating": 4.7,
-    "totalFees": 880000,
-    "overview": "IIT Delhi excels in engineering education and innovation, hosting India's leading startup incubators.",
-    "courses": [
-      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 880000 },
-      { "name": "B.Tech Mechanical Engineering", "duration": "4 years", "fees": 880000 }
-    ],
-    "placements": {
-      "averagePackage": 2200000,
-      "highestPackage": 19500000,
-      "topRecruiters": ["Microsoft", "Amazon", "Adobe", "Uber"]
-    }
-  },
-  {
-    "id": "iit-madras",
-    "name": "Indian Institute of Technology, Madras",
+    "id": "indian-institute-of-technology-madras",
+    "rank": 1,
+    "name": "Indian Institute of Technology Madras",
     "location": "Chennai",
     "state": "Tamil Nadu",
     "type": "Govt",
-    "rating": 4.8,
-    "totalFees": 850000,
-    "overview": "IIT Madras consistently ranks #1 in NIRF for engineering and is known for its research depth.",
+    "rating": 4.9,
+    "totalFees": 1000000,
+    "overview": "Ranked #1 in NIRF 2024, Indian Institute of Technology Madras is a top-tier government engineering institute located in Chennai, Tamil Nadu.",
     "courses": [
-      { "name": "B.Tech Computer Science", "duration": "4 years", "fees": 850000 },
-      { "name": "Dual Degree Data Science", "duration": "5 years", "fees": 1100000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 2150000,
-      "highestPackage": 19800000,
-      "topRecruiters": ["Google", "Qualcomm", "Texas Instruments"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "Google",
+        "Microsoft",
+        "Goldman Sachs",
+        "Qualcomm",
+        "Texas Instruments"
+      ]
     }
   },
   {
-    "id": "iit-kanpur",
-    "name": "Indian Institute of Technology, Kanpur",
+    "id": "indian-institute-of-technology-delhi",
+    "rank": 2,
+    "name": "Indian Institute of Technology Delhi",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4.9,
+    "totalFees": 800000,
+    "overview": "Ranked #2 in NIRF 2024, Indian Institute of Technology Delhi is a top-tier government engineering institute located in New Delhi, Delhi.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 2100000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "McKinsey",
+        "Goldman Sachs",
+        "Samsung"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-bombay",
+    "rank": 3,
+    "name": "Indian Institute of Technology Bombay",
+    "location": "Mumbai",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4.9,
+    "totalFees": 800000,
+    "overview": "Ranked #3 in NIRF 2024, Indian Institute of Technology Bombay is a top-tier government engineering institute located in Mumbai, Maharashtra.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 2180000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Google",
+        "Amazon",
+        "JP Morgan",
+        "Microsoft",
+        "Apple"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-kanpur",
+    "rank": 4,
+    "name": "Indian Institute of Technology Kanpur",
     "location": "Kanpur",
     "state": "Uttar Pradesh",
     "type": "Govt",
-    "rating": 4.6,
-    "totalFees": 820000,
-    "overview": "IIT Kanpur is renowned for its strong academic culture and rigorous engineering programs.",
+    "rating": 4.8,
+    "totalFees": 800000,
+    "overview": "Ranked #4 in NIRF 2024, Indian Institute of Technology Kanpur is a top-tier government engineering institute located in Kanpur, Uttar Pradesh.",
     "courses": [
-      { "name": "B.Tech Aerospace", "duration": "4 years", "fees": 820000 },
-      { "name": "B.Tech Computer Science", "duration": "4 years" }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 2000000,
-      "highestPackage": 18000000,
-      "topRecruiters": ["ISRO", "Boeing", "Microsoft"]
+      "averagePackage": 2020000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Adobe",
+        "Qualcomm",
+        "Samsung"
+      ]
     }
   },
   {
-    "id": "iit-kharagpur",
-    "name": "Indian Institute of Technology, Kharagpur",
+    "id": "indian-institute-of-technology-kharagpur",
+    "rank": 5,
+    "name": "Indian Institute of Technology Kharagpur",
     "location": "Kharagpur",
     "state": "West Bengal",
     "type": "Govt",
-    "rating": 4.5,
-    "totalFees": 830000,
-    "overview": "India's oldest IIT, offering broad engineering and interdisciplinary programs.",
+    "rating": 4.8,
+    "totalFees": 800000,
+    "overview": "Ranked #5 in NIRF 2024, Indian Institute of Technology Kharagpur is a top-tier government engineering institute located in Kharagpur, West Bengal.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 830000 },
-      { "name": "B.Arch", "duration": "5 years", "fees": 1000000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 1950000,
-      "highestPackage": 17500000,
-      "topRecruiters": ["Goldman Sachs", "Microsoft", "Tata Steel"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Microsoft",
+        "Amazon",
+        "Tata Steel",
+        "Goldman Sachs"
+      ]
     }
   },
   {
-    "id": "nit-trichy",
-    "name": "National Institute of Technology, Tiruchirappalli",
+    "id": "indian-institute-of-technology-roorkee",
+    "rank": 6,
+    "name": "Indian Institute of Technology Roorkee",
+    "location": "Roorkee",
+    "state": "Uttarakhand",
+    "type": "Govt",
+    "rating": 4.7,
+    "totalFees": 800000,
+    "overview": "Ranked #6 in NIRF 2024, Indian Institute of Technology Roorkee is a top-tier government engineering institute located in Roorkee, Uttarakhand.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1870000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "ITC",
+        "L&T",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-guwahati",
+    "rank": 7,
+    "name": "Indian Institute of Technology Guwahati",
+    "location": "Guwahati",
+    "state": "Assam",
+    "type": "Govt",
+    "rating": 4.7,
+    "totalFees": 800000,
+    "overview": "Ranked #7 in NIRF 2024, Indian Institute of Technology Guwahati is a top-tier government engineering institute located in Guwahati, Assam.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1790000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Samsung",
+        "ITC",
+        "Tata Steel",
+        "Microsoft"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-hyderabad",
+    "rank": 8,
+    "name": "Indian Institute of Technology Hyderabad",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 4.7,
+    "totalFees": 800000,
+    "overview": "Ranked #8 in NIRF 2024, Indian Institute of Technology Hyderabad is a top-tier government engineering institute located in Hyderabad, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1830000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Qualcomm",
+        "Google",
+        "Samsung"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-tiruchirappalli",
+    "rank": 9,
+    "name": "National Institute of Technology Tiruchirappalli",
     "location": "Tiruchirappalli",
     "state": "Tamil Nadu",
     "type": "Govt",
-    "rating": 4.4,
-    "totalFees": 560000,
-    "overview": "NIT Trichy is the top-ranked NIT, known for strong placements and academic rigor.",
+    "rating": 4.6,
+    "totalFees": 600000,
+    "overview": "Ranked #9 in NIRF 2024, National Institute of Technology Tiruchirappalli is a top-tier government engineering institute located in Tiruchirappalli, Tamil Nadu.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 560000 },
-      { "name": "B.Tech ECE", "duration": "4 years", "fees": 560000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 1500000,
-      "highestPackage": 6000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Oracle"]
+      "averagePackage": 1450000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
     }
   },
   {
-    "id": "nit-warangal",
-    "name": "National Institute of Technology, Warangal",
-    "location": "Warangal",
-    "state": "Telangana",
+    "id": "indian-institute-of-technology-bhu-varanasi",
+    "rank": 10,
+    "name": "Indian Institute of Technology (BHU) Varanasi",
+    "location": "Varanasi",
+    "state": "Uttar Pradesh",
     "type": "Govt",
-    "rating": 4.3,
-    "totalFees": 540000,
-    "overview": "NIT Warangal is a leading NIT with diverse engineering offerings and strong industry ties.",
+    "rating": 4.6,
+    "totalFees": 800000,
+    "overview": "Ranked #10 in NIRF 2024, Indian Institute of Technology (BHU) Varanasi is a top-tier government engineering institute located in Varanasi, Uttar Pradesh.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 540000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1720000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Samsung",
+        "ITC",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "vellore-institute-of-technology",
+    "rank": 11,
+    "name": "Vellore Institute of Technology",
+    "location": "Vellore",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 4.5,
+    "totalFees": 800000,
+    "overview": "Ranked #11 in NIRF 2024, Vellore Institute of Technology is a highly-ranked private engineering institute located in Vellore, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Microsoft",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "jadavpur-university",
+    "rank": 12,
+    "name": "Jadavpur University",
+    "location": "Kolkata",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 4.5,
+    "totalFees": 50000,
+    "overview": "Ranked #12 in NIRF 2024, Jadavpur University is a highly-ranked government engineering institute located in Kolkata, West Bengal.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Wipro",
+        "ITC",
+        "L&T",
+        "Tata Steel"
+      ]
+    }
+  },
+  {
+    "id": "srm-institute-of-science-and-technology",
+    "rank": 13,
+    "name": "SRM Institute of Science and Technology",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 4.4,
+    "totalFees": 1000000,
+    "overview": "Ranked #13 in NIRF 2024, SRM Institute of Science and Technology is a highly-ranked private engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 780000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Accenture",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "anna-university",
+    "rank": 14,
+    "name": "Anna University",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 80000,
+    "overview": "Ranked #14 in NIRF 2024, Anna University is a highly-ranked government engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "L&T",
+        "Ashok Leyland"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-ism-dhanbad",
+    "rank": 15,
+    "name": "Indian Institute of Technology (ISM) Dhanbad",
+    "location": "Dhanbad",
+    "state": "Jharkhand",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 800000,
+    "overview": "Ranked #15 in NIRF 2024, Indian Institute of Technology (ISM) Dhanbad is a highly-ranked government engineering institute located in Dhanbad, Jharkhand.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1680000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Tata Steel",
+        "ONGC",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-indore",
+    "rank": 16,
+    "name": "Indian Institute of Technology Indore",
+    "location": "Indore",
+    "state": "Madhya Pradesh",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 800000,
+    "overview": "Ranked #16 in NIRF 2024, Indian Institute of Technology Indore is a highly-ranked government engineering institute located in Indore, Madhya Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1620000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "Samsung",
+        "Qualcomm",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-karnataka-surathkal",
+    "rank": 17,
+    "name": "National Institute of Technology Karnataka Surathkal",
+    "location": "Surathkal",
+    "state": "Karnataka",
+    "type": "Govt",
+    "rating": 4.4,
+    "totalFees": 600000,
+    "overview": "Ranked #17 in NIRF 2024, National Institute of Technology Karnataka Surathkal is a highly-ranked government engineering institute located in Surathkal, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 1400000,
-      "highestPackage": 5500000,
-      "topRecruiters": ["Amazon", "Microsoft"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Cognizant",
+        "Wipro"
+      ]
     }
   },
   {
-    "id": "nit-surathkal",
-    "name": "National Institute of Technology, Karnataka, Surathkal",
-    "location": "Mangalore",
-    "state": "Karnataka",
+    "id": "indian-institute-of-technology-gandhinagar",
+    "rank": 18,
+    "name": "Indian Institute of Technology Gandhinagar",
+    "location": "Gandhinagar",
+    "state": "Gujarat",
     "type": "Govt",
-    "rating": null,
-    "totalFees": 530000,
-    "overview": "NITK Surathkal is a coastal NIT offering excellent engineering and research environment.",
+    "rating": 4.3,
+    "totalFees": 800000,
+    "overview": "Ranked #18 in NIRF 2024, Indian Institute of Technology Gandhinagar is a highly-ranked government engineering institute located in Gandhinagar, Gujarat.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 530000 },
-      { "name": "B.Tech Civil", "duration": "4 years" }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1590000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Samsung",
+        "Qualcomm",
+        "Reliance"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-rourkela",
+    "rank": 19,
+    "name": "National Institute of Technology Rourkela",
+    "location": "Rourkela",
+    "state": "Odisha",
+    "type": "Govt",
+    "rating": 4.3,
+    "totalFees": 600000,
+    "overview": "Ranked #19 in NIRF 2024, National Institute of Technology Rourkela is a highly-ranked government engineering institute located in Rourkela, Odisha.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 1350000,
-      "topRecruiters": ["Cisco", "Microsoft"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Tata Steel",
+        "Wipro",
+        "L&T"
+      ]
     }
   },
   {
-    "id": "bits-pilani",
-    "name": "Birla Institute of Technology and Science, Pilani",
+    "id": "birla-institute-of-technology-and-science-pilani",
+    "rank": 20,
+    "name": "Birla Institute of Technology and Science Pilani",
     "location": "Pilani",
     "state": "Rajasthan",
     "type": "Private",
     "rating": 4.5,
     "totalFees": 1800000,
-    "overview": "BITS Pilani is a top-tier private engineering institute known for flexible curriculum and global alumni.",
+    "overview": "Ranked #20 in NIRF 2024, Birla Institute of Technology and Science Pilani is a highly-ranked private engineering institute located in Pilani, Rajasthan.",
     "courses": [
-      { "name": "B.E. Computer Science", "duration": "4 years", "fees": 1800000 },
-      { "name": "M.Sc. Economics", "duration": "2 years", "fees": 700000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 1750000,
-      "highestPackage": 9000000,
-      "topRecruiters": ["Microsoft", "Goldman Sachs", "Uber"]
+      "averagePackage": 1500000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Goldman Sachs",
+        "ITC",
+        "Adobe"
+      ]
     }
   },
   {
-    "id": "vit-vellore",
-    "name": "Vellore Institute of Technology",
-    "location": "Vellore",
+    "id": "national-institute-of-technology-warangal",
+    "rank": 21,
+    "name": "National Institute of Technology Warangal",
+    "location": "Warangal",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 4.3,
+    "totalFees": 600000,
+    "overview": "Ranked #21 in NIRF 2024, National Institute of Technology Warangal is a highly-ranked government engineering institute located in Warangal, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1380000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-ropar",
+    "rank": 22,
+    "name": "Indian Institute of Technology Ropar",
+    "location": "Ropar",
+    "state": "Punjab",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 800000,
+    "overview": "Ranked #22 in NIRF 2024, Indian Institute of Technology Ropar is a highly-ranked government engineering institute located in Ropar, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1450000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "Samsung",
+        "Adobe",
+        "Qualcomm"
+      ]
+    }
+  },
+  {
+    "id": "amrita-vishwa-vidyapeetham",
+    "rank": 23,
+    "name": "Amrita Vishwa Vidyapeetham",
+    "location": "Coimbatore",
     "state": "Tamil Nadu",
     "type": "Private",
+    "rating": 4.3,
+    "totalFees": 950000,
+    "overview": "Ranked #23 in NIRF 2024, Amrita Vishwa Vidyapeetham is a highly-ranked private engineering institute located in Coimbatore, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 820000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Cognizant",
+        "Wipro",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "jamia-millia-islamia",
+    "rank": 24,
+    "name": "Jamia Millia Islamia",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
     "rating": 4.2,
-    "totalFees": 1600000,
-    "overview": "VIT is a large private university with diverse engineering and management programs.",
+    "totalFees": 90000,
+    "overview": "Ranked #24 in NIRF 2024, Jamia Millia Islamia is a highly-ranked government engineering institute located in New Delhi, Delhi.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1600000 },
-      { "name": "MBA", "duration": "2 years", "fees": 900000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 900000,
-      "highestPackage": 4400000,
-      "topRecruiters": ["TCS", "Infosys", "Cognizant", "Amazon"]
+      "averagePackage": 950000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "Accenture"
+      ]
     }
   },
   {
-    "id": "manipal",
-    "name": "Manipal Institute of Technology",
-    "location": "Manipal",
-    "state": "Karnataka",
-    "type": "Deemed",
-    "rating": 4.1,
-    "totalFees": 1700000,
-    "overview": "MIT Manipal is a deemed university offering wide-ranging programs with strong industry exposure.",
+    "id": "national-institute-of-technology-calicut",
+    "rank": 25,
+    "name": "National Institute of Technology Calicut",
+    "location": "Calicut",
+    "state": "Kerala",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 600000,
+    "overview": "Ranked #25 in NIRF 2024, National Institute of Technology Calicut is a highly-ranked government engineering institute located in Calicut, Kerala.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1700000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 850000,
-      "highestPackage": 4500000,
-      "topRecruiters": ["Microsoft", "Amazon", "Walmart"]
+      "averagePackage": 1320000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Cognizant"
+      ]
     }
   },
   {
-    "id": "srm-chennai",
-    "name": "SRM Institute of Science and Technology",
-    "location": "Chennai",
-    "state": "Tamil Nadu",
-    "type": "Deemed",
-    "rating": 3.9,
-    "totalFees": 1500000,
-    "overview": "SRM is a large deemed-to-be university with multiple campuses and a global student community.",
+    "id": "siksha-o-anusandhan",
+    "rank": 26,
+    "name": "Siksha O Anusandhan",
+    "location": "Bhubaneswar",
+    "state": "Odisha",
+    "type": "Private",
+    "rating": 4,
+    "totalFees": 1100000,
+    "overview": "Ranked #26 in NIRF 2024, Siksha O Anusandhan is a highly-ranked private engineering institute located in Bhubaneswar, Odisha.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1500000 },
-      { "name": "BBA", "duration": "3 years", "fees": 600000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 700000,
-      "highestPackage": 4100000,
-      "topRecruiters": ["TCS", "Wipro", "Cognizant"]
+      "averagePackage": 650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Capgemini"
+      ]
     }
   },
   {
-    "id": "iiit-hyderabad",
-    "name": "International Institute of Information Technology, Hyderabad",
-    "location": "Hyderabad",
-    "state": "Telangana",
-    "type": "Deemed",
-    "rating": 4.6,
-    "totalFees": 1300000,
-    "overview": "IIIT Hyderabad is a research-focused institute known for top-tier CS programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 },
-      { "name": "Dual Degree CSE + MS", "duration": "5 years", "fees": 1700000 }
-    ],
-    "placements": {
-      "averagePackage": 2900000,
-      "highestPackage": 8200000,
-      "topRecruiters": ["Google", "Microsoft", "Adobe", "Goldman Sachs"]
-    }
-  },
-  {
-    "id": "dtu-delhi",
+    "id": "delhi-technological-university",
+    "rank": 27,
     "name": "Delhi Technological University",
     "location": "New Delhi",
     "state": "Delhi",
     "type": "Govt",
-    "rating": 4.2,
-    "totalFees": 720000,
-    "overview": "DTU is a state-funded technical university with a long heritage in Delhi.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 720000 },
-      { "name": "B.Tech ECE", "duration": "4 years" }
-    ],
-    "placements": {
-      "averagePackage": 1500000,
-      "highestPackage": 6000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Samsung"]
-    }
-  },
-  {
-    "id": "iit-roorkee",
-    "name": "Indian Institute of Technology, Roorkee",
-    "location": "Roorkee",
-    "state": "Uttarakhand",
-    "type": "Govt",
-    "rating": 4.5,
-    "totalFees": 810000,
-    "overview": "IIT Roorkee, one of the oldest engineering schools in Asia, with renowned civil and mechanical programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 810000 },
-      { "name": "B.Tech Civil", "duration": "4 years", "fees": 810000 }
-    ],
-    "placements": {
-      "averagePackage": 1800000,
-      "highestPackage": 14500000,
-      "topRecruiters": ["Microsoft", "L&T", "Schlumberger"]
-    }
-  },
-  {
-    "id": "nit-calicut",
-    "name": "National Institute of Technology, Calicut",
-    "location": "Kozhikode",
-    "state": "Kerala",
-    "type": "Govt",
-    "rating": 4.2,
-    "overview": "NIT Calicut offers strong engineering programs in a scenic Kerala campus.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years" }
-    ],
-    "placements": {
-      "averagePackage": 1200000,
-      "highestPackage": 4800000,
-      "topRecruiters": ["Amazon", "Cisco"]
-    }
-  },
-  {
-    "id": "thapar-patiala",
-    "name": "Thapar Institute of Engineering and Technology",
-    "location": "Patiala",
-    "state": "Punjab",
-    "type": "Deemed",
-    "rating": 4.0,
-    "totalFees": 1500000,
-    "overview": "Thapar is a leading deemed institute in North India, with strong engineering and management programs.",
-    "courses": [
-      { "name": "B.E. CSE", "duration": "4 years", "fees": 1500000 }
-    ],
-    "placements": {
-      "averagePackage": 1000000,
-      "highestPackage": 5200000,
-      "topRecruiters": []
-    }
-  },
-  {
-    "id": "amrita-coimbatore",
-    "name": "Amrita Vishwa Vidyapeetham",
-    "location": "Coimbatore",
-    "state": "Tamil Nadu",
-    "type": "Deemed",
-    "rating": 4.0,
-    "totalFees": 1300000,
-    "overview": "Amrita is a multi-campus deemed university with strong engineering and humanities offerings.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 },
-      { "name": "BBA", "duration": "3 years" }
-    ],
-    "placements": {
-      "averagePackage": 800000,
-      "topRecruiters": ["TCS", "Wipro"]
-    }
-  },
-  {
-    "id": "pes-bangalore",
-    "name": "PES University",
-    "location": "Bangalore",
-    "state": "Karnataka",
-    "type": "Private",
-    "rating": null,
-    "totalFees": 1600000,
-    "overview": "PES University is a leading private university in Bangalore with excellent placement record.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1600000 }
-    ],
-    "placements": {
-      "averagePackage": 1100000,
-      "highestPackage": 5800000,
-      "topRecruiters": ["Goldman Sachs", "Microsoft", "Amazon"]
-    }
-  },
-  {
-    "id": "lpu-jalandhar",
-    "name": "Lovely Professional University",
-    "location": "Phagwara",
-    "state": "Punjab",
-    "type": "Private",
-    "rating": 3.7,
-    "overview": "LPU is one of India's largest private universities, offering diverse programs and a vibrant campus.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years" },
-      { "name": "BBA", "duration": "3 years", "fees": 500000 }
-    ],
-    "placements": {
-      "averagePackage": 600000,
-      "highestPackage": 4200000,
-      "topRecruiters": []
-    }
-  },
-  {
-    "id": "iit-guwahati",
-    "name": "Indian Institute of Technology, Guwahati",
-    "location": "Guwahati",
-    "state": "Assam",
-    "type": "Govt",
-    "rating": 4.4,
-    "totalFees": 800000,
-    "overview": "IIT Guwahati is the youngest of the original IITs, set on the banks of the Brahmaputra with a beautiful campus.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
-      { "name": "B.Tech Biotechnology", "duration": "4 years", "fees": 800000 }
-    ],
-    "placements": {
-      "averagePackage": 1700000,
-      "highestPackage": 13000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Samsung", "Goldman Sachs"]
-    }
-  },
-  {
-    "id": "iit-hyderabad",
-    "name": "Indian Institute of Technology, Hyderabad",
-    "location": "Hyderabad",
-    "state": "Telangana",
-    "type": "Govt",
-    "rating": 4.5,
-    "totalFees": 820000,
-    "overview": "IIT Hyderabad pioneered fractal academics and is known for strong AI and entrepreneurship culture.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 820000 },
-      { "name": "B.Tech AI", "duration": "4 years", "fees": 820000 }
-    ],
-    "placements": {
-      "averagePackage": 2050000,
-      "highestPackage": 17800000,
-      "topRecruiters": ["Microsoft", "Google", "Qualcomm"]
-    }
-  },
-  {
-    "id": "iit-bhu",
-    "name": "Indian Institute of Technology (BHU), Varanasi",
-    "location": "Varanasi",
-    "state": "Uttar Pradesh",
-    "type": "Govt",
     "rating": 4.3,
-    "totalFees": 800000,
-    "overview": "IIT-BHU traces its heritage back to 1919 and offers a wide range of engineering disciplines.",
+    "totalFees": 150000,
+    "overview": "Ranked #27 in NIRF 2024, Delhi Technological University is a highly-ranked government engineering institute located in New Delhi, Delhi.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
-      { "name": "B.Tech Chemical", "duration": "4 years" }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 1600000,
-      "highestPackage": 11500000,
-      "topRecruiters": ["Microsoft", "Goldman Sachs", "Reliance"]
+      "averagePackage": 1280000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
     }
   },
   {
-    "id": "iit-indore",
-    "name": "Indian Institute of Technology, Indore",
-    "location": "Indore",
-    "state": "Madhya Pradesh",
-    "type": "Govt",
-    "rating": 4.2,
-    "totalFees": 830000,
-    "overview": "IIT Indore is a younger IIT known for its research focus and modern campus.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 830000 }
-    ],
-    "placements": {
-      "averagePackage": 1750000,
-      "highestPackage": 14000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Adobe"]
-    }
-  },
-  {
-    "id": "iit-gandhinagar",
-    "name": "Indian Institute of Technology, Gandhinagar",
-    "location": "Gandhinagar",
-    "state": "Gujarat",
-    "type": "Govt",
-    "rating": 4.4,
-    "totalFees": 815000,
-    "overview": "IIT Gandhinagar emphasizes a holistic curriculum with strong design and humanities exposure.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 815000 },
-      { "name": "B.Tech Mechanical", "duration": "4 years", "fees": 815000 }
-    ],
-    "placements": {
-      "averagePackage": 1650000,
-      "highestPackage": 9500000,
-      "topRecruiters": ["Microsoft", "Goldman Sachs", "Texas Instruments"]
-    }
-  },
-  {
-    "id": "iit-mandi",
-    "name": "Indian Institute of Technology, Mandi",
-    "location": "Mandi",
-    "state": "Himachal Pradesh",
-    "type": "Govt",
-    "rating": null,
-    "totalFees": 825000,
-    "overview": "IIT Mandi is nestled in the Himalayas, blending strong academics with a unique campus experience.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 825000 }
-    ],
-    "placements": {
-      "averagePackage": 1450000,
-      "highestPackage": 8500000,
-      "topRecruiters": ["Microsoft", "Amazon"]
-    }
-  },
-  {
-    "id": "iit-ropar",
-    "name": "Indian Institute of Technology, Ropar",
-    "location": "Rupnagar",
-    "state": "Punjab",
-    "type": "Govt",
-    "rating": 4.1,
-    "totalFees": 820000,
-    "overview": "IIT Ropar is a newer IIT that has rapidly built a strong reputation for research output.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 820000 }
-    ],
-    "placements": {
-      "averagePackage": 1500000,
-      "highestPackage": 8000000,
-      "topRecruiters": ["Microsoft", "Samsung", "Flipkart"]
-    }
-  },
-  {
-    "id": "iit-jodhpur",
-    "name": "Indian Institute of Technology, Jodhpur",
+    "id": "indian-institute-of-technology-jodhpur",
+    "rank": 28,
+    "name": "Indian Institute of Technology Jodhpur",
     "location": "Jodhpur",
     "state": "Rajasthan",
     "type": "Govt",
-    "rating": 4.0,
-    "totalFees": 810000,
-    "overview": "IIT Jodhpur is known for interdisciplinary programs and strong industry collaboration in AI and IoT.",
+    "rating": 4.1,
+    "totalFees": 800000,
+    "overview": "Ranked #28 in NIRF 2024, Indian Institute of Technology Jodhpur is a highly-ranked government engineering institute located in Jodhpur, Rajasthan.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 810000 },
-      { "name": "B.Tech AI & DS", "duration": "4 years" }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 1400000,
-      "highestPackage": 7500000,
-      "topRecruiters": ["Microsoft", "Cisco"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "Samsung",
+        "Qualcomm",
+        "Adobe"
+      ]
     }
   },
   {
-    "id": "nit-rourkela",
-    "name": "National Institute of Technology, Rourkela",
-    "location": "Rourkela",
-    "state": "Odisha",
-    "type": "Govt",
-    "rating": 4.2,
-    "totalFees": 550000,
-    "overview": "NIT Rourkela is a leading NIT known for strong metallurgy and computing programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 550000 },
-      { "name": "B.Tech Metallurgy", "duration": "4 years", "fees": 550000 }
-    ],
-    "placements": {
-      "averagePackage": 1300000,
-      "highestPackage": 5800000,
-      "topRecruiters": ["Microsoft", "Tata Steel", "Amazon"]
-    }
-  },
-  {
-    "id": "nit-allahabad",
-    "name": "Motilal Nehru National Institute of Technology, Allahabad",
-    "location": "Prayagraj",
-    "state": "Uttar Pradesh",
-    "type": "Govt",
-    "rating": 4.1,
-    "totalFees": 540000,
-    "overview": "MNNIT Allahabad is one of the oldest engineering institutes in India, known for its CS and ECE programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 540000 }
-    ],
-    "placements": {
-      "averagePackage": 1350000,
-      "highestPackage": 5500000,
-      "topRecruiters": ["Microsoft", "Amazon", "Samsung"]
-    }
-  },
-  {
-    "id": "nit-jaipur",
-    "name": "Malaviya National Institute of Technology, Jaipur",
-    "location": "Jaipur",
-    "state": "Rajasthan",
-    "type": "Govt",
-    "rating": null,
-    "totalFees": 530000,
-    "overview": "MNIT Jaipur offers strong engineering programs in the Pink City with growing research output.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 530000 }
-    ],
-    "placements": {
-      "averagePackage": 1200000,
-      "highestPackage": 5200000,
-      "topRecruiters": ["Microsoft", "Amazon"]
-    }
-  },
-  {
-    "id": "nit-surat",
-    "name": "Sardar Vallabhbhai National Institute of Technology, Surat",
-    "location": "Surat",
-    "state": "Gujarat",
-    "type": "Govt",
-    "rating": 4.0,
-    "totalFees": 520000,
-    "overview": "SVNIT Surat is a respected NIT with strong civil, chemical and computer engineering departments.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 520000 },
-      { "name": "B.Tech Chemical", "duration": "4 years" }
-    ],
-    "placements": {
-      "averagePackage": 1150000,
-      "highestPackage": 4800000,
-      "topRecruiters": ["Microsoft", "L&T", "Reliance"]
-    }
-  },
-  {
-    "id": "nit-nagpur",
-    "name": "Visvesvaraya National Institute of Technology, Nagpur",
-    "location": "Nagpur",
-    "state": "Maharashtra",
-    "type": "Govt",
-    "rating": 4.0,
-    "totalFees": 525000,
-    "overview": "VNIT Nagpur is a centrally-located NIT with strong programs in mechanical, civil and computer science.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 525000 }
-    ],
-    "placements": {
-      "averagePackage": 1250000,
-      "highestPackage": 5000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Cisco"]
-    }
-  },
-  {
-    "id": "nit-kurukshetra",
-    "name": "National Institute of Technology, Kurukshetra",
-    "location": "Kurukshetra",
-    "state": "Haryana",
-    "type": "Govt",
-    "rating": 3.9,
-    "overview": "NIT Kurukshetra is a well-established NIT in North India with diverse engineering offerings.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years" }
-    ],
-    "placements": {
-      "averagePackage": 1100000,
-      "highestPackage": 4600000,
-      "topRecruiters": ["Amazon", "Samsung"]
-    }
-  },
-  {
-    "id": "nit-durgapur",
-    "name": "National Institute of Technology, Durgapur",
-    "location": "Durgapur",
-    "state": "West Bengal",
-    "type": "Govt",
-    "rating": 3.9,
-    "totalFees": 520000,
-    "overview": "NIT Durgapur is one of the older NITs with a strong industrial heritage in eastern India.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 520000 },
-      { "name": "B.Tech Metallurgy", "duration": "4 years" }
-    ],
-    "placements": {
-      "averagePackage": 1050000,
-      "highestPackage": 4500000,
-      "topRecruiters": ["TCS", "Microsoft"]
-    }
-  },
-  {
-    "id": "nit-bhopal",
-    "name": "Maulana Azad National Institute of Technology, Bhopal",
-    "location": "Bhopal",
-    "state": "Madhya Pradesh",
-    "type": "Govt",
-    "rating": null,
-    "totalFees": 510000,
-    "overview": "MANIT Bhopal is a central-India NIT offering a wide range of engineering programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 510000 }
-    ],
-    "placements": {
-      "averagePackage": 1000000,
-      "highestPackage": 4300000,
-      "topRecruiters": ["Microsoft", "TCS"]
-    }
-  },
-  {
-    "id": "iiit-bangalore",
-    "name": "International Institute of Information Technology, Bangalore",
-    "location": "Bangalore",
-    "state": "Karnataka",
-    "type": "Deemed",
-    "rating": 4.4,
-    "totalFees": 1500000,
-    "overview": "IIIT Bangalore is an autonomous deemed institute focused on IT education and research.",
-    "courses": [
-      { "name": "iMTech CSE", "duration": "5 years", "fees": 1500000 },
-      { "name": "M.Tech AI/ML", "duration": "2 years", "fees": 800000 }
-    ],
-    "placements": {
-      "averagePackage": 2400000,
-      "highestPackage": 7800000,
-      "topRecruiters": ["Microsoft", "Google", "Goldman Sachs"]
-    }
-  },
-  {
-    "id": "iiit-delhi",
-    "name": "Indraprastha Institute of Information Technology, Delhi",
-    "location": "New Delhi",
-    "state": "Delhi",
-    "type": "Govt",
-    "rating": 4.3,
-    "totalFees": 1400000,
-    "overview": "IIIT-Delhi is a state university focused on IT, with strong research and industry connections.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1400000 },
-      { "name": "B.Tech CSAM", "duration": "4 years", "fees": 1400000 }
-    ],
-    "placements": {
-      "averagePackage": 2100000,
-      "highestPackage": 6800000,
-      "topRecruiters": ["Microsoft", "Amazon", "Adobe"]
-    }
-  },
-  {
-    "id": "iiit-allahabad",
-    "name": "Indian Institute of Information Technology, Allahabad",
-    "location": "Prayagraj",
-    "state": "Uttar Pradesh",
-    "type": "Govt",
-    "rating": 4.0,
-    "totalFees": 950000,
-    "overview": "IIIT Allahabad is a centrally funded technical institute specializing in IT and ECE.",
-    "courses": [
-      { "name": "B.Tech IT", "duration": "4 years", "fees": 950000 }
-    ],
-    "placements": {
-      "averagePackage": 1700000,
-      "highestPackage": 6500000,
-      "topRecruiters": ["Amazon", "Microsoft", "Samsung"]
-    }
-  },
-  {
-    "id": "iiit-gwalior",
-    "name": "ABV-Indian Institute of Information Technology and Management, Gwalior",
-    "location": "Gwalior",
-    "state": "Madhya Pradesh",
-    "type": "Govt",
-    "rating": null,
-    "overview": "ABV-IIITM Gwalior combines IT and management education with a strong central-India campus.",
-    "courses": [
-      { "name": "Integrated MBA-IT", "duration": "5 years" }
-    ],
-    "placements": {
-      "averagePackage": 950000,
-      "highestPackage": 4200000,
-      "topRecruiters": ["TCS", "Infosys"]
-    }
-  },
-  {
-    "id": "jadavpur",
-    "name": "Jadavpur University",
-    "location": "Kolkata",
-    "state": "West Bengal",
-    "type": "Govt",
-    "rating": 4.4,
-    "totalFees": 50000,
-    "overview": "Jadavpur University is a state university in Kolkata known for affordable, research-driven engineering education.",
-    "courses": [
-      { "name": "B.E. CSE", "duration": "4 years", "fees": 50000 },
-      { "name": "B.E. ETC", "duration": "4 years", "fees": 50000 }
-    ],
-    "placements": {
-      "averagePackage": 1300000,
-      "highestPackage": 5500000,
-      "topRecruiters": ["Microsoft", "Amazon", "Google"]
-    }
-  },
-  {
-    "id": "coep-pune",
-    "name": "College of Engineering, Pune",
-    "location": "Pune",
-    "state": "Maharashtra",
-    "type": "Govt",
-    "rating": 4.2,
-    "totalFees": 350000,
-    "overview": "COEP Pune is one of the oldest engineering colleges in India, with strong heritage and placements.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 350000 }
-    ],
-    "placements": {
-      "averagePackage": 1200000,
-      "highestPackage": 5000000,
-      "topRecruiters": ["Microsoft", "Amazon", "Bajaj"]
-    }
-  },
-  {
-    "id": "ict-mumbai",
-    "name": "Institute of Chemical Technology, Mumbai",
-    "location": "Mumbai",
-    "state": "Maharashtra",
-    "type": "Deemed",
-    "rating": 4.5,
-    "totalFees": 400000,
-    "overview": "ICT Mumbai is a deemed institute renowned for chemical engineering and pharma sciences.",
-    "courses": [
-      { "name": "B.Tech Chemical", "duration": "4 years", "fees": 400000 },
-      { "name": "B.Pharm", "duration": "4 years", "fees": 350000 }
-    ],
-    "placements": {
-      "averagePackage": 1100000,
-      "highestPackage": 6000000,
-      "topRecruiters": ["Reliance", "Pfizer", "Unilever"]
-    }
-  },
-  {
-    "id": "shiv-nadar",
-    "name": "Shiv Nadar Institution of Eminence",
-    "location": "Greater Noida",
-    "state": "Uttar Pradesh",
+    "id": "thapar-institute-of-engineering-and-technology",
+    "rank": 29,
+    "name": "Thapar Institute of Engineering and Technology",
+    "location": "Patiala",
+    "state": "Punjab",
     "type": "Private",
     "rating": 4.2,
-    "totalFees": 1650000,
-    "overview": "Shiv Nadar University is a research-focused private institute with liberal-arts inspired engineering curriculum.",
+    "totalFees": 900000,
+    "overview": "Ranked #29 in NIRF 2024, Thapar Institute of Engineering and Technology is a highly-ranked private engineering institute located in Patiala, Punjab.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1650000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 1200000,
-      "highestPackage": 5400000,
-      "topRecruiters": ["Microsoft", "Amazon"]
+      "averagePackage": 900000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Cognizant"
+      ]
     }
   },
   {
-    "id": "ashoka",
-    "name": "Ashoka University",
-    "location": "Sonipat",
-    "state": "Haryana",
-    "type": "Private",
-    "rating": 4.3,
-    "totalFees": 1900000,
-    "overview": "Ashoka University is a liberal arts university with growing CS and interdisciplinary programs.",
-    "courses": [
-      { "name": "B.Sc. Computer Science", "duration": "3 years", "fees": 1900000 },
-      { "name": "B.A. Economics", "duration": "3 years", "fees": 1900000 }
-    ],
-    "placements": {
-      "averagePackage": 950000,
-      "highestPackage": 4200000,
-      "topRecruiters": []
-    }
-  },
-  {
-    "id": "jindal",
-    "name": "O.P. Jindal Global University",
-    "location": "Sonipat",
-    "state": "Haryana",
-    "type": "Private",
-    "rating": 4.1,
-    "overview": "JGU is a private research university with diverse programs across law, business and tech.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years" },
-      { "name": "BBA", "duration": "3 years", "fees": 1200000 }
-    ],
-    "placements": {
-      "averagePackage": 800000,
-      "topRecruiters": ["Deloitte", "EY"]
-    }
-  },
-  {
-    "id": "christ-bangalore",
-    "name": "Christ (Deemed to be University)",
-    "location": "Bangalore",
-    "state": "Karnataka",
-    "type": "Deemed",
-    "rating": 4.0,
-    "totalFees": 800000,
-    "overview": "Christ University is a deemed multi-disciplinary university with strong management and CS programs.",
-    "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 800000 },
-      { "name": "BBA", "duration": "3 years", "fees": 600000 }
-    ],
-    "placements": {
-      "averagePackage": 700000,
-      "highestPackage": 3500000,
-      "topRecruiters": ["TCS", "Wipro", "Deloitte"]
-    }
-  },
-  {
-    "id": "amity-noida",
-    "name": "Amity University, Noida",
+    "id": "amity-university",
+    "rank": 30,
+    "name": "Amity University",
     "location": "Noida",
     "state": "Uttar Pradesh",
     "type": "Private",
     "rating": 3.8,
-    "totalFees": 1400000,
-    "overview": "Amity University Noida is one of India's largest private universities with a wide range of programs.",
+    "totalFees": 1000000,
+    "overview": "Ranked #30 in NIRF 2024, Amity University is a highly-ranked private engineering institute located in Noida, Uttar Pradesh.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1400000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 700000,
-      "highestPackage": 4000000,
-      "topRecruiters": ["TCS", "Wipro", "Cognizant"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Wipro",
+        "Cognizant",
+        "Amazon",
+        "HCL"
+      ]
     }
   },
   {
-    "id": "symbiosis-pune",
-    "name": "Symbiosis Institute of Technology, Pune",
-    "location": "Pune",
-    "state": "Maharashtra",
-    "type": "Deemed",
-    "rating": 3.9,
-    "totalFees": 1300000,
-    "overview": "Symbiosis Institute of Technology is a deemed-university engineering school with strong Pune industry ties.",
+    "id": "indian-institute-of-technology-mandi",
+    "rank": 31,
+    "name": "Indian Institute of Technology Mandi",
+    "location": "Mandi",
+    "state": "Himachal Pradesh",
+    "type": "Govt",
+    "rating": 4.1,
+    "totalFees": 800000,
+    "overview": "Ranked #31 in NIRF 2024, Indian Institute of Technology Mandi is a well-regarded government engineering institute located in Mandi, Himachal Pradesh.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1300000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1350000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "Samsung",
+        "Adobe",
+        "Qualcomm"
+      ]
+    }
+  },
+  {
+    "id": "chandigarh-university",
+    "rank": 32,
+    "name": "Chandigarh University",
+    "location": "Mohali",
+    "state": "Punjab",
+    "type": "Private",
+    "rating": 4,
+    "totalFees": 700000,
+    "overview": "Ranked #32 in NIRF 2024, Chandigarh University is a well-regarded private engineering institute located in Mohali, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 680000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Amazon",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "aligarh-muslim-university",
+    "rank": 33,
+    "name": "Aligarh Muslim University",
+    "location": "Aligarh",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 60000,
+    "overview": "Ranked #33 in NIRF 2024, Aligarh Muslim University is a well-regarded government engineering institute located in Aligarh, Uttar Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "ONGC"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-patna",
+    "rank": 34,
+    "name": "Indian Institute of Technology Patna",
+    "location": "Patna",
+    "state": "Bihar",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 800000,
+    "overview": "Ranked #34 in NIRF 2024, Indian Institute of Technology Patna is a well-regarded government engineering institute located in Patna, Bihar.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1300000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "Samsung",
+        "Adobe",
+        "TCS"
+      ]
+    }
+  },
+  {
+    "id": "koneru-lakshmaiah-education-foundation",
+    "rank": 35,
+    "name": "Koneru Lakshmaiah Education Foundation",
+    "location": "Guntur",
+    "state": "Andhra Pradesh",
+    "type": "Private",
+    "rating": 3.9,
+    "totalFees": 650000,
+    "overview": "Ranked #35 in NIRF 2024, Koneru Lakshmaiah Education Foundation is a well-regarded private engineering institute located in Guntur, Andhra Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 620000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Capgemini"
+      ]
+    }
+  },
+  {
+    "id": "kalasalingam-academy-of-research-and-education",
+    "rank": 36,
+    "name": "Kalasalingam Academy of Research and Education",
+    "location": "Krishnankovil",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 3.8,
+    "totalFees": 500000,
+    "overview": "Ranked #36 in NIRF 2024, Kalasalingam Academy of Research and Education is a well-regarded private engineering institute located in Krishnankovil, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 550000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "kalinga-institute-of-industrial-technology",
+    "rank": 37,
+    "name": "Kalinga Institute of Industrial Technology",
+    "location": "Bhubaneswar",
+    "state": "Odisha",
+    "type": "Private",
+    "rating": 4.1,
+    "totalFees": 1500000,
+    "overview": "Ranked #37 in NIRF 2024, Kalinga Institute of Industrial Technology is a well-regarded private engineering institute located in Bhubaneswar, Odisha.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 750000,
-      "highestPackage": 4200000,
-      "topRecruiters": ["Infosys", "TCS"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Microsoft",
+        "Cognizant"
+      ]
     }
   },
   {
-    "id": "sastra",
+    "id": "sastra-deemed-university",
+    "rank": 38,
     "name": "SASTRA Deemed University",
     "location": "Thanjavur",
     "state": "Tamil Nadu",
     "type": "Deemed",
-    "rating": 4.0,
-    "totalFees": 1000000,
-    "overview": "SASTRA is a deemed university in Tamil Nadu known for affordable, quality engineering education.",
+    "rating": 4,
+    "totalFees": 900000,
+    "overview": "Ranked #38 in NIRF 2024, SASTRA Deemed University is a well-regarded deemed engineering institute located in Thanjavur, Tamil Nadu.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1000000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 900000,
-      "highestPackage": 4400000,
-      "topRecruiters": ["Microsoft", "Amazon", "Zoho"]
+      "averagePackage": 650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
     }
   },
   {
-    "id": "pdpu-gandhinagar",
-    "name": "Pandit Deendayal Energy University",
-    "location": "Gandhinagar",
-    "state": "Gujarat",
-    "type": "Private",
-    "rating": null,
-    "totalFees": 1100000,
-    "overview": "PDEU (formerly PDPU) is a Gujarat-based private university with a strong focus on energy and engineering.",
+    "id": "visvesvaraya-national-institute-of-technology-nagpur",
+    "rank": 39,
+    "name": "Visvesvaraya National Institute of Technology Nagpur",
+    "location": "Nagpur",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 600000,
+    "overview": "Ranked #39 in NIRF 2024, Visvesvaraya National Institute of Technology Nagpur is a well-regarded government engineering institute located in Nagpur, Maharashtra.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years", "fees": 1100000 },
-      { "name": "B.Tech Petroleum", "duration": "4 years", "fees": 1100000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
-      "averagePackage": 850000,
-      "highestPackage": 4500000,
-      "topRecruiters": ["Reliance", "ONGC", "L&T"]
+      "averagePackage": 1250000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "L&T"
+      ]
     }
   },
   {
-    "id": "nirma-ahmedabad",
-    "name": "Nirma University",
-    "location": "Ahmedabad",
-    "state": "Gujarat",
+    "id": "national-institute-of-technology-silchar",
+    "rank": 40,
+    "name": "National Institute of Technology Silchar",
+    "location": "Silchar",
+    "state": "Assam",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 600000,
+    "overview": "Ranked #40 in NIRF 2024, National Institute of Technology Silchar is a well-regarded government engineering institute located in Silchar, Assam.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "institute-of-chemical-technology",
+    "rank": 41,
+    "name": "Institute of Chemical Technology",
+    "location": "Mumbai",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 4.1,
+    "totalFees": 200000,
+    "overview": "Ranked #41 in NIRF 2024, Institute of Chemical Technology is a well-regarded government engineering institute located in Mumbai, Maharashtra.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Reliance",
+        "ONGC",
+        "L&T",
+        "TCS",
+        "Unilever"
+      ]
+    }
+  },
+  {
+    "id": "upes",
+    "rank": 42,
+    "name": "UPES",
+    "location": "Dehradun",
+    "state": "Uttarakhand",
     "type": "Private",
     "rating": 3.9,
-    "overview": "Nirma University is a Gujarat-based private university with strong engineering and pharmacy programs.",
+    "totalFees": 1600000,
+    "overview": "Ranked #42 in NIRF 2024, UPES is a well-regarded private engineering institute located in Dehradun, Uttarakhand.",
     "courses": [
-      { "name": "B.Tech CSE", "duration": "4 years" },
-      { "name": "B.Pharm", "duration": "4 years", "fees": 800000 }
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 720000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "ONGC",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "malaviya-national-institute-of-technology",
+    "rank": 43,
+    "name": "Malaviya National Institute of Technology",
+    "location": "Jaipur",
+    "state": "Rajasthan",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 600000,
+    "overview": "Ranked #43 in NIRF 2024, Malaviya National Institute of Technology is a well-regarded government engineering institute located in Jaipur, Rajasthan.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1220000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-durgapur",
+    "rank": 44,
+    "name": "National Institute of Technology Durgapur",
+    "location": "Durgapur",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 600000,
+    "overview": "Ranked #44 in NIRF 2024, National Institute of Technology Durgapur is a well-regarded government engineering institute located in Durgapur, West Bengal.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1180000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-delhi",
+    "rank": 45,
+    "name": "National Institute of Technology Delhi",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #45 in NIRF 2024, National Institute of Technology Delhi is a well-regarded government engineering institute located in New Delhi, Delhi.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Amazon",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "sri-sivasubramaniya-nadar-college-of-engineering",
+    "rank": 46,
+    "name": "Sri Sivasubramaniya Nadar College of Engineering",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 4.1,
+    "totalFees": 500000,
+    "overview": "Ranked #46 in NIRF 2024, Sri Sivasubramaniya Nadar College of Engineering is a well-regarded private engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 950000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Cognizant",
+        "Wipro"
+      ]
+    }
+  },
+  {
+    "id": "international-institute-of-information-technology-hyderabad",
+    "rank": 47,
+    "name": "International Institute of Information Technology Hyderabad",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Deemed",
+    "rating": 4.5,
+    "totalFees": 1100000,
+    "overview": "Ranked #47 in NIRF 2024, International Institute of Information Technology Hyderabad is a well-regarded deemed engineering institute located in Hyderabad, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1800000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Adobe",
+        "Qualcomm"
+      ]
+    }
+  },
+  {
+    "id": "birla-institute-of-technology-mesra",
+    "rank": 48,
+    "name": "Birla Institute of Technology Mesra",
+    "location": "Ranchi",
+    "state": "Jharkhand",
+    "type": "Deemed",
+    "rating": 3.9,
+    "totalFees": 700000,
+    "overview": "Ranked #48 in NIRF 2024, Birla Institute of Technology Mesra is a well-regarded deemed engineering institute located in Ranchi, Jharkhand.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
     ],
     "placements": {
       "averagePackage": 800000,
-      "highestPackage": 4100000,
-      "topRecruiters": ["TCS", "Infosys"]
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-engineering-science-and-technology-shibp",
+    "rank": 49,
+    "name": "Indian Institute of Engineering Science and Technology Shibpur",
+    "location": "Howrah",
+    "state": "West Bengal",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 600000,
+    "overview": "Ranked #49 in NIRF 2024, Indian Institute of Engineering Science and Technology Shibpur is a well-regarded government engineering institute located in Howrah, West Bengal.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1120000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Tata Steel",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "lovely-professional-university",
+    "rank": 50,
+    "name": "Lovely Professional University",
+    "location": "Jalandhar",
+    "state": "Punjab",
+    "type": "Private",
+    "rating": 3.7,
+    "totalFees": 600000,
+    "overview": "Ranked #50 in NIRF 2024, Lovely Professional University is a well-regarded private engineering institute located in Jalandhar, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Wipro",
+        "Cognizant",
+        "Amazon",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-space-science-and-technology",
+    "rank": 51,
+    "name": "Indian Institute of Space Science and Technology",
+    "location": "Thiruvananthapuram",
+    "state": "Kerala",
+    "type": "Govt",
+    "rating": 4.2,
+    "totalFees": 400000,
+    "overview": "Ranked #51 in NIRF 2024, Indian Institute of Space Science and Technology is a well-regarded government engineering institute located in Thiruvananthapuram, Kerala.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1450000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "ISRO",
+        "DRDO",
+        "Amazon",
+        "Microsoft",
+        "Samsung"
+      ]
+    }
+  },
+  {
+    "id": "graphic-era-university",
+    "rank": 52,
+    "name": "Graphic Era University",
+    "location": "Dehradun",
+    "state": "Uttarakhand",
+    "type": "Private",
+    "rating": 3.7,
+    "totalFees": 650000,
+    "overview": "Ranked #52 in NIRF 2024, Graphic Era University is a well-regarded private engineering institute located in Dehradun, Uttarakhand.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 580000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "saveetha-institute-of-medical-and-technical-sciences",
+    "rank": 53,
+    "name": "Saveetha Institute of Medical and Technical Sciences",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 3.8,
+    "totalFees": 800000,
+    "overview": "Ranked #53 in NIRF 2024, Saveetha Institute of Medical and Technical Sciences is a well-regarded deemed engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Capgemini"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-bhubaneswar",
+    "rank": 54,
+    "name": "Indian Institute of Technology Bhubaneswar",
+    "location": "Bhubaneswar",
+    "state": "Odisha",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 800000,
+    "overview": "Ranked #54 in NIRF 2024, Indian Institute of Technology Bhubaneswar is a well-regarded government engineering institute located in Bhubaneswar, Odisha.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1280000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-patna",
+    "rank": 55,
+    "name": "National Institute of Technology Patna",
+    "location": "Patna",
+    "state": "Bihar",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #55 in NIRF 2024, National Institute of Technology Patna is a well-regarded government engineering institute located in Patna, Bihar.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "manipal-institute-of-technology",
+    "rank": 56,
+    "name": "Manipal Institute of Technology",
+    "location": "Manipal",
+    "state": "Karnataka",
+    "type": "Private",
+    "rating": 4.2,
+    "totalFees": 1100000,
+    "overview": "Ranked #56 in NIRF 2024, Manipal Institute of Technology is a well-regarded private engineering institute located in Manipal, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Microsoft",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "netaji-subhas-university-of-technology",
+    "rank": 57,
+    "name": "Netaji Subhas University of Technology",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4,
+    "totalFees": 150000,
+    "overview": "Ranked #57 in NIRF 2024, Netaji Subhas University of Technology is a well-regarded government engineering institute located in New Delhi, Delhi.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "dr-b-r-ambedkar-national-institute-of-technology-jalandhar",
+    "rank": 58,
+    "name": "Dr B R Ambedkar National Institute of Technology Jalandhar",
+    "location": "Jalandhar",
+    "state": "Punjab",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #58 in NIRF 2024, Dr B R Ambedkar National Institute of Technology Jalandhar is a well-regarded government engineering institute located in Jalandhar, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1080000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "sardar-vallabhbhai-national-institute-of-technology",
+    "rank": 59,
+    "name": "Sardar Vallabhbhai National Institute of Technology",
+    "location": "Surat",
+    "state": "Gujarat",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 600000,
+    "overview": "Ranked #59 in NIRF 2024, Sardar Vallabhbhai National Institute of Technology is a well-regarded government engineering institute located in Surat, Gujarat.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Reliance"
+      ]
+    }
+  },
+  {
+    "id": "motilal-nehru-national-institute-of-technology",
+    "rank": 60,
+    "name": "Motilal Nehru National Institute of Technology",
+    "location": "Allahabad",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #60 in NIRF 2024, Motilal Nehru National Institute of Technology is a well-regarded government engineering institute located in Allahabad, Uttar Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-tirupati",
+    "rank": 61,
+    "name": "Indian Institute of Technology Tirupati",
+    "location": "Tirupati",
+    "state": "Andhra Pradesh",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 800000,
+    "overview": "Ranked #61 in NIRF 2024, Indian Institute of Technology Tirupati is a recognized government engineering institute located in Tirupati, Andhra Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1200000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-jammu",
+    "rank": 62,
+    "name": "Indian Institute of Technology Jammu",
+    "location": "Jammu",
+    "state": "Jammu and Kashmir",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 800000,
+    "overview": "Ranked #62 in NIRF 2024, Indian Institute of Technology Jammu is a recognized government engineering institute located in Jammu, Jammu and Kashmir.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1180000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "defence-institute-of-advanced-technology",
+    "rank": 63,
+    "name": "Defence Institute of Advanced Technology",
+    "location": "Pune",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 250000,
+    "overview": "Ranked #63 in NIRF 2024, Defence Institute of Advanced Technology is a recognized government engineering institute located in Pune, Maharashtra.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "DRDO",
+        "ISRO",
+        "HAL",
+        "BEL",
+        "TCS"
+      ]
+    }
+  },
+  {
+    "id": "manipal-university-jaipur",
+    "rank": 64,
+    "name": "Manipal University Jaipur",
+    "location": "Jaipur",
+    "state": "Rajasthan",
+    "type": "Private",
+    "rating": 3.8,
+    "totalFees": 950000,
+    "overview": "Ranked #64 in NIRF 2024, Manipal University Jaipur is a recognized private engineering institute located in Jaipur, Rajasthan.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 700000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-palakkad",
+    "rank": 64,
+    "name": "Indian Institute of Technology Palakkad",
+    "location": "Palakkad",
+    "state": "Kerala",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 800000,
+    "overview": "Ranked #64 in NIRF 2024, Indian Institute of Technology Palakkad is a recognized government engineering institute located in Palakkad, Kerala.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "sathyabama-institute-of-science-and-technology",
+    "rank": 66,
+    "name": "Sathyabama Institute of Science and Technology",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 3.7,
+    "totalFees": 700000,
+    "overview": "Ranked #66 in NIRF 2024, Sathyabama Institute of Science and Technology is a recognized deemed engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Capgemini"
+      ]
+    }
+  },
+  {
+    "id": "psg-college-of-technology",
+    "rank": 67,
+    "name": "PSG College of Technology",
+    "location": "Coimbatore",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 4,
+    "totalFees": 500000,
+    "overview": "Ranked #67 in NIRF 2024, PSG College of Technology is a recognized private engineering institute located in Coimbatore, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Amazon",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-meghalaya",
+    "rank": 68,
+    "name": "National Institute of Technology Meghalaya",
+    "location": "Shillong",
+    "state": "Meghalaya",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 600000,
+    "overview": "Ranked #68 in NIRF 2024, National Institute of Technology Meghalaya is a recognized government engineering institute located in Shillong, Meghalaya.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 950000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "visvesvaraya-technological-university",
+    "rank": 69,
+    "name": "Visvesvaraya Technological University",
+    "location": "Belagavi",
+    "state": "Karnataka",
+    "type": "Govt",
+    "rating": 3.7,
+    "totalFees": 100000,
+    "overview": "Ranked #69 in NIRF 2024, Visvesvaraya Technological University is a recognized government engineering institute located in Belagavi, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 750000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "university-of-hyderabad",
+    "rank": 70,
+    "name": "University of Hyderabad",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 50000,
+    "overview": "Ranked #70 in NIRF 2024, University of Hyderabad is a recognized government engineering institute located in Hyderabad, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 900000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Amazon",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-raipur",
+    "rank": 71,
+    "name": "National Institute of Technology Raipur",
+    "location": "Raipur",
+    "state": "Chhattisgarh",
+    "type": "Govt",
+    "rating": 3.7,
+    "totalFees": 600000,
+    "overview": "Ranked #71 in NIRF 2024, National Institute of Technology Raipur is a recognized government engineering institute located in Raipur, Chhattisgarh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 980000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "maulana-azad-national-institute-of-technology",
+    "rank": 72,
+    "name": "Maulana Azad National Institute of Technology",
+    "location": "Bhopal",
+    "state": "Madhya Pradesh",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #72 in NIRF 2024, Maulana Azad National Institute of Technology is a recognized government engineering institute located in Bhopal, Madhya Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1000000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-bhilai",
+    "rank": 73,
+    "name": "Indian Institute of Technology Bhilai",
+    "location": "Bhilai",
+    "state": "Chhattisgarh",
+    "type": "Govt",
+    "rating": 3.7,
+    "totalFees": 800000,
+    "overview": "Ranked #73 in NIRF 2024, Indian Institute of Technology Bhilai is a recognized government engineering institute located in Bhilai, Chhattisgarh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Amazon",
+        "Microsoft",
+        "TCS",
+        "Samsung",
+        "Adobe"
+      ]
+    }
+  },
+  {
+    "id": "international-institute-of-information-technology-bangalore",
+    "rank": 74,
+    "name": "International Institute of Information Technology Bangalore",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 4.3,
+    "totalFees": 1200000,
+    "overview": "Ranked #74 in NIRF 2024, International Institute of Information Technology Bangalore is a recognized deemed engineering institute located in Bangalore, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Adobe",
+        "Flipkart"
+      ]
+    }
+  },
+  {
+    "id": "m-s-ramaiah-institute-of-technology",
+    "rank": 75,
+    "name": "M S Ramaiah Institute of Technology",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Private",
+    "rating": 4,
+    "totalFees": 600000,
+    "overview": "Ranked #75 in NIRF 2024, M S Ramaiah Institute of Technology is a recognized private engineering institute located in Bangalore, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 900000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "sant-longowal-institute-of-engineering-and-technology",
+    "rank": 76,
+    "name": "Sant Longowal Institute of Engineering and Technology",
+    "location": "Sangrur",
+    "state": "Punjab",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 500000,
+    "overview": "Ranked #76 in NIRF 2024, Sant Longowal Institute of Engineering and Technology is a recognized government engineering institute located in Sangrur, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "coep-technological-university",
+    "rank": 77,
+    "name": "COEP Technological University",
+    "location": "Pune",
+    "state": "Maharashtra",
+    "type": "Govt",
+    "rating": 3.9,
+    "totalFees": 150000,
+    "overview": "Ranked #77 in NIRF 2024, COEP Technological University is a recognized government engineering institute located in Pune, Maharashtra.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "L&T"
+      ]
+    }
+  },
+  {
+    "id": "banasthali-vidyapith",
+    "rank": 78,
+    "name": "Banasthali Vidyapith",
+    "location": "Jaipur",
+    "state": "Rajasthan",
+    "type": "Deemed",
+    "rating": 3.7,
+    "totalFees": 500000,
+    "overview": "Ranked #78 in NIRF 2024, Banasthali Vidyapith is a recognized deemed engineering institute located in Jaipur, Rajasthan.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-srinagar",
+    "rank": 79,
+    "name": "National Institute of Technology Srinagar",
+    "location": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 600000,
+    "overview": "Ranked #79 in NIRF 2024, National Institute of Technology Srinagar is a recognized government engineering institute located in Srinagar, Jammu and Kashmir.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "rajiv-gandhi-institute-of-petroleum-technology",
+    "rank": 80,
+    "name": "Rajiv Gandhi Institute of Petroleum Technology",
+    "location": "Rae Bareli",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #80 in NIRF 2024, Rajiv Gandhi Institute of Petroleum Technology is a recognized government engineering institute located in Rae Bareli, Uttar Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1150000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "ONGC",
+        "Reliance",
+        "IOCL",
+        "Shell",
+        "TCS"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-kurukshetra",
+    "rank": 81,
+    "name": "National Institute of Technology Kurukshetra",
+    "location": "Kurukshetra",
+    "state": "Haryana",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 600000,
+    "overview": "Ranked #81 in NIRF 2024, National Institute of Technology Kurukshetra is a recognized government engineering institute located in Kurukshetra, Haryana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1020000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-agartala",
+    "rank": 82,
+    "name": "National Institute of Technology Agartala",
+    "location": "Agartala",
+    "state": "Tripura",
+    "type": "Govt",
+    "rating": 3.5,
+    "totalFees": 600000,
+    "overview": "Ranked #82 in NIRF 2024, National Institute of Technology Agartala is a recognized government engineering institute located in Agartala, Tripura.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 800000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "sri-krishna-college-of-engineering-and-technology",
+    "rank": 83,
+    "name": "Sri Krishna College of Engineering and Technology",
+    "location": "Coimbatore",
+    "state": "Tamil Nadu",
+    "type": "Private",
+    "rating": 3.7,
+    "totalFees": 500000,
+    "overview": "Ranked #83 in NIRF 2024, Sri Krishna College of Engineering and Technology is a recognized private engineering institute located in Coimbatore, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 700000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Capgemini"
+      ]
+    }
+  },
+  {
+    "id": "madan-mohan-malaviya-university-of-technology",
+    "rank": 84,
+    "name": "Madan Mohan Malaviya University of Technology",
+    "location": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 150000,
+    "overview": "Ranked #84 in NIRF 2024, Madan Mohan Malaviya University of Technology is a recognized government engineering institute located in Gorakhpur, Uttar Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 750000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "indraprastha-institute-of-information-technology-delhi",
+    "rank": 85,
+    "name": "Indraprastha Institute of Information Technology Delhi",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 4.1,
+    "totalFees": 500000,
+    "overview": "Ranked #85 in NIRF 2024, Indraprastha Institute of Information Technology Delhi is a recognized government engineering institute located in New Delhi, Delhi.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1400000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "Microsoft",
+        "Amazon",
+        "TCS",
+        "Adobe",
+        "Samsung"
+      ]
+    }
+  },
+  {
+    "id": "vel-tech-rangarajan-dr-sagunthala-r-and-d-institute",
+    "rank": 86,
+    "name": "Vel Tech Rangarajan Dr Sagunthala R&D Institute",
+    "location": "Chennai",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 3.5,
+    "totalFees": 450000,
+    "overview": "Ranked #86 in NIRF 2024, Vel Tech Rangarajan Dr Sagunthala R&D Institute is a recognized deemed engineering institute located in Chennai, Tamil Nadu.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 550000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "indian-institute-of-information-technology-allahabad",
+    "rank": 87,
+    "name": "Indian Institute of Information Technology Allahabad",
+    "location": "Allahabad",
+    "state": "Uttar Pradesh",
+    "type": "Govt",
+    "rating": 3.8,
+    "totalFees": 500000,
+    "overview": "Ranked #87 in NIRF 2024, Indian Institute of Information Technology Allahabad is a recognized government engineering institute located in Allahabad, Uttar Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1100000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Microsoft",
+        "Wipro"
+      ]
+    }
+  },
+  {
+    "id": "jawaharlal-nehru-technological-university",
+    "rank": 88,
+    "name": "Jawaharlal Nehru Technological University",
+    "location": "Hyderabad",
+    "state": "Telangana",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 80000,
+    "overview": "Ranked #88 in NIRF 2024, Jawaharlal Nehru Technological University is a recognized government engineering institute located in Hyderabad, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "guru-gobind-singh-indraprastha-university",
+    "rank": 89,
+    "name": "Guru Gobind Singh Indraprastha University",
+    "location": "New Delhi",
+    "state": "Delhi",
+    "type": "Govt",
+    "rating": 3.7,
+    "totalFees": 120000,
+    "overview": "Ranked #89 in NIRF 2024, Guru Gobind Singh Indraprastha University is a recognized government engineering institute located in New Delhi, Delhi.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 800000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Amazon",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "au-college-of-engineering",
+    "rank": 90,
+    "name": "AU College of Engineering",
+    "location": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "type": "Govt",
+    "rating": 3.6,
+    "totalFees": 40000,
+    "overview": "Ranked #90 in NIRF 2024, AU College of Engineering is a recognized government engineering institute located in Visakhapatnam, Andhra Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "ONGC"
+      ]
+    }
+  },
+  {
+    "id": "vignan-s-foundation-for-science-technology-and-research",
+    "rank": 91,
+    "name": "Vignan's Foundation for Science Technology and Research",
+    "location": "Guntur",
+    "state": "Andhra Pradesh",
+    "type": "Deemed",
+    "rating": 3.5,
+    "totalFees": 500000,
+    "overview": "Ranked #91 in NIRF 2024, Vignan's Foundation for Science Technology and Research is a recognized deemed engineering institute located in Guntur, Andhra Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 550000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "shoolini-university",
+    "rank": 92,
+    "name": "Shoolini University",
+    "location": "Solan",
+    "state": "Himachal Pradesh",
+    "type": "Private",
+    "rating": 3.6,
+    "totalFees": 400000,
+    "overview": "Ranked #92 in NIRF 2024, Shoolini University is a recognized private engineering institute located in Solan, Himachal Pradesh.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 500000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "christ-university",
+    "rank": 93,
+    "name": "Christ University",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 3.9,
+    "totalFees": 550000,
+    "overview": "Ranked #93 in NIRF 2024, Christ University is a recognized deemed engineering institute located in Bangalore, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 750000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Deloitte"
+      ]
+    }
+  },
+  {
+    "id": "chitkara-university",
+    "rank": 94,
+    "name": "Chitkara University",
+    "location": "Patiala",
+    "state": "Punjab",
+    "type": "Private",
+    "rating": 3.7,
+    "totalFees": 600000,
+    "overview": "Ranked #94 in NIRF 2024, Chitkara University is a recognized private engineering institute located in Patiala, Punjab.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 650000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "Amazon"
+      ]
+    }
+  },
+  {
+    "id": "jain-university",
+    "rank": 95,
+    "name": "Jain University",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Deemed",
+    "rating": 3.6,
+    "totalFees": 500000,
+    "overview": "Ranked #95 in NIRF 2024, Jain University is a recognized deemed engineering institute located in Bangalore, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 600000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "c-v-raman-global-university",
+    "rank": 96,
+    "name": "C V Raman Global University",
+    "location": "Bhubaneswar",
+    "state": "Odisha",
+    "type": "Private",
+    "rating": 3.4,
+    "totalFees": 400000,
+    "overview": "Ranked #96 in NIRF 2024, C V Raman Global University is a recognized private engineering institute located in Bhubaneswar, Odisha.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 500000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "national-institute-of-technology-puducherry",
+    "rank": 97,
+    "name": "National Institute of Technology Puducherry",
+    "location": "Puducherry",
+    "state": "Pondicherry",
+    "type": "Govt",
+    "rating": 3.5,
+    "totalFees": 600000,
+    "overview": "Ranked #97 in NIRF 2024, National Institute of Technology Puducherry is a recognized government engineering institute located in Puducherry, Pondicherry.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 850000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "sr-university",
+    "rank": 98,
+    "name": "SR University",
+    "location": "Warangal",
+    "state": "Telangana",
+    "type": "Private",
+    "rating": 3.4,
+    "totalFees": 400000,
+    "overview": "Ranked #98 in NIRF 2024, SR University is a recognized private engineering institute located in Warangal, Telangana.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 550000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
+    }
+  },
+  {
+    "id": "r-v-college-of-engineering",
+    "rank": 99,
+    "name": "R V College of Engineering",
+    "location": "Bangalore",
+    "state": "Karnataka",
+    "type": "Private",
+    "rating": 4,
+    "totalFees": 600000,
+    "overview": "Ranked #99 in NIRF 2024, R V College of Engineering is a recognized private engineering institute located in Bangalore, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 1050000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Amazon",
+        "Wipro",
+        "Cognizant"
+      ]
+    }
+  },
+  {
+    "id": "siddaganga-institute-of-technology",
+    "rank": 100,
+    "name": "Siddaganga Institute of Technology",
+    "location": "Tumkur",
+    "state": "Karnataka",
+    "type": "Private",
+    "rating": 3.6,
+    "totalFees": 400000,
+    "overview": "Ranked #100 in NIRF 2024, Siddaganga Institute of Technology is a recognized private engineering institute located in Tumkur, Karnataka.",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "duration": "4 years",
+        "degreeType": "UG"
+      }
+    ],
+    "placements": {
+      "averagePackage": 750000,
+      "highestPackage": null,
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "Cognizant",
+        "HCL"
+      ]
     }
   }
 ]
