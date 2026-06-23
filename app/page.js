@@ -10,7 +10,7 @@ import HeroSection from '@/components/colleges/HeroSection';
 import ActiveFilters from '@/components/colleges/ActiveFilters';
 import WhySection from '@/components/colleges/WhySection';
 import ScrollIndicator from '@/components/ScrollIndicator';
-import Pagination from '@/components/ui/Pagination';
+import Pagination from '@/components/ui/pagination';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { SlidersHorizontal, SearchX, ArrowUpDown } from 'lucide-react';
